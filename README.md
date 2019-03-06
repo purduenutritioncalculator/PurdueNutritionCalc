@@ -64,4 +64,4 @@ Product Spec
    
 ## Wireframe
 
-![Wireframe]("iOS Wireframe.jpg")
+![Wireframe](https://github.com/purduenutritioncalculator/PurdueNutritionCalc/blob/master/iOS%20Wireframe.jpg)
