@@ -97,3 +97,13 @@ Meal
 |---|---|---|
 |Items|Array of food item objects|Contains all food items eaten for that meal|
 |Date|String/date object|Date/time that meal was eaten|
+
+## Networking
+
+Meal Select View
+ * GET request for chosen dining court's information
+
+Menu Detailed Item View
+ * GET request for chosen item's information
+ 
+
