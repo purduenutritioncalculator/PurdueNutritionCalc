@@ -69,6 +69,7 @@ Product Spec
 ## Models
 
 Food Item
+
 | Property | Type | Description |
 | --- | --- | --- |
 | Id | String | API's unique identifier for a food item |
