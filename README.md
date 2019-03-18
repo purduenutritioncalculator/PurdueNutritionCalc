@@ -70,9 +70,9 @@ Product Spec
 
 Food Item
 
-| Property | Type | Description |
-| --- | --- | --- |
-| Id | String | API's unique identifier for a food item |
+|Property|Type|Description|
+|---|---|---|
+|Id|String|API's unique identifier for a food item|
 |Name|String|Name of item|
 |Calories|Integer|Number of calories in item|
 |Serving size|String|Description of one serving for item|
@@ -81,3 +81,13 @@ Food Item
 |Carbs|Integer|Grams of carbs in item|
 |Sugar|Integer|Grams of sugar in item|
 |Allergens|String|List of allergens item contains|
+
+Dining Court
+
+|Property|Type|Description|
+|---|---|---|
+|Name|String|Name of dining court|
+|Picture|url|Link to dining court's logo/picture|
+|Menu|Array of food items|Food items being served in dining court|
+|Times|String|Times for breakfast, lunch, and dinner in that court for current day|
+
