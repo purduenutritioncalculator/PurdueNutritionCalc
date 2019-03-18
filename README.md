@@ -91,3 +91,9 @@ Dining Court
 |Menu|Array of food items|Food items being served in dining court|
 |Times|String|Times for breakfast, lunch, and dinner in that court for current day|
 
+Meal
+
+|Property|Type|Description|
+|---|---|---|
+|Items|Array of food item objects|Contains all food items eaten for that meal|
+|Date|String/date object|Date/time that meal was eaten|
