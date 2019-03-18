@@ -69,9 +69,9 @@ Product Spec
 ## Models
 
 Food Item
-|Property|Type|Description|
-|---|---|---|
-|Id|String|API's unique identifier for a food item|
+| Property | Type | Description |
+| --- | --- | --- |
+| Id | String | API's unique identifier for a food item |
 |Name|String|Name of item|
 |Calories|Integer|Number of calories in item|
 |Serving size|String|Description of one serving for item|
