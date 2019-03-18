@@ -65,3 +65,18 @@ Product Spec
 ## Wireframe
 
 ![Wireframe](https://github.com/purduenutritioncalculator/PurdueNutritionCalc/blob/master/iOS%20Wireframe.jpg)
+
+## Models
+
+Food Item
+|Property|Type|Description|
+|---|---|---|
+|Id|String|API's unique identifier for a food item|
+|Name|String|Name of item|
+|Calories|Integer|Number of calories in item|
+|Serving size|String|Description of one serving for item|
+|Fat|Integer|Grams of fat in item|
+|Protein|Integer|Grams of protein in item|
+|Carbs|Integer|Grams of carbs in item|
+|Sugar|Integer|Grams of sugar in item|
+|Allergens|String|List of allergens item contains|
