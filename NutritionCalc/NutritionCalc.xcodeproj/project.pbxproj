@@ -12,6 +12,12 @@
 		715E672C224056D90025BA04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 715E672A224056D90025BA04 /* Main.storyboard */; };
 		715E672E224056E30025BA04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 715E672D224056E30025BA04 /* Assets.xcassets */; };
 		715E6731224056E30025BA04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 715E672F224056E30025BA04 /* LaunchScreen.storyboard */; };
+		BC5B1C5A2242F83F007727A0 /* DiningCourtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5B1C592242F83F007727A0 /* DiningCourtViewController.swift */; };
+		BC5B1C5C2242F953007727A0 /* DiningCourtCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5B1C5B2242F953007727A0 /* DiningCourtCell.swift */; };
+		BCB87F792246B1B800ED7B35 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB87F782246B1B800ED7B35 /* MenuViewController.swift */; };
+		BCB87F7B2246B25100ED7B35 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB87F7A2246B25100ED7B35 /* MenuCell.swift */; };
+		BCDED9F4224540BD00156052 /* MealTypeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDED9F3224540BD00156052 /* MealTypeController.swift */; };
+		BCDED9F62245422E00156052 /* MealSelectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDED9F52245422E00156052 /* MealSelectCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +28,12 @@
 		715E672D224056E30025BA04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		715E6730224056E30025BA04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		715E6732224056E30025BA04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC5B1C592242F83F007727A0 /* DiningCourtViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiningCourtViewController.swift; sourceTree = "<group>"; };
+		BC5B1C5B2242F953007727A0 /* DiningCourtCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiningCourtCell.swift; sourceTree = "<group>"; };
+		BCB87F782246B1B800ED7B35 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		BCB87F7A2246B25100ED7B35 /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
+		BCDED9F3224540BD00156052 /* MealTypeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealTypeController.swift; sourceTree = "<group>"; };
+		BCDED9F52245422E00156052 /* MealSelectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealSelectCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +72,12 @@
 				715E672D224056E30025BA04 /* Assets.xcassets */,
 				715E672F224056E30025BA04 /* LaunchScreen.storyboard */,
 				715E6732224056E30025BA04 /* Info.plist */,
+				BC5B1C592242F83F007727A0 /* DiningCourtViewController.swift */,
+				BC5B1C5B2242F953007727A0 /* DiningCourtCell.swift */,
+				BCDED9F3224540BD00156052 /* MealTypeController.swift */,
+				BCDED9F52245422E00156052 /* MealSelectCell.swift */,
+				BCB87F782246B1B800ED7B35 /* MenuViewController.swift */,
+				BCB87F7A2246B25100ED7B35 /* MenuCell.swift */,
 			);
 			path = NutritionCalc;
 			sourceTree = "<group>";
@@ -136,6 +154,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				715E6729224056D90025BA04 /* ViewController.swift in Sources */,
+				BC5B1C5A2242F83F007727A0 /* DiningCourtViewController.swift in Sources */,
+				BCDED9F4224540BD00156052 /* MealTypeController.swift in Sources */,
+				BCB87F792246B1B800ED7B35 /* MenuViewController.swift in Sources */,
+				BC5B1C5C2242F953007727A0 /* DiningCourtCell.swift in Sources */,
+				BCDED9F62245422E00156052 /* MealSelectCell.swift in Sources */,
+				BCB87F7B2246B25100ED7B35 /* MenuCell.swift in Sources */,
 				715E6727224056D90025BA04 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
