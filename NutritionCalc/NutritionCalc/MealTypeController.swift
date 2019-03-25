@@ -13,6 +13,11 @@ class MealTypeController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBOutlet weak var mealSelectTableView: UITableView!
     
     var diningCourt = ""
+    // meals
+    // iterate through meals to find the selected meal
+    // once found index the stations element
+    // Stations[1] = the menu
+    var selectedMealMenu = [String:Any]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,5 +75,6 @@ class MealTypeController: UIViewController, UITableViewDataSource, UITableViewDe
         
         menuViewController.diningCourt = diningCourt
         menuViewController.mealType = mealType
+        menuViewController.meals = meals
     }
 }
