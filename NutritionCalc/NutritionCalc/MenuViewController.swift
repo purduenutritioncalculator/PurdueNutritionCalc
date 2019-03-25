@@ -50,7 +50,9 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
                 // TODO: Reload your table view data
                 self.meals = dataDictionary["Meals"] as! [[String:Any]]
                 
-                print(self.meals)
+//                print(self.meals)
+                print(self.meals[0]["ID"])
+                
             }
         }
         task.resume()

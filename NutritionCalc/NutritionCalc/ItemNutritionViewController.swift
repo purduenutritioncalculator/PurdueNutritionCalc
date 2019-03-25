@@ -8,16 +8,30 @@
 
 import UIKit
 
-class ItemNutritionViewController: UIViewController {
+class ItemNutritionViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    var types = ["Calories", "Total Fat", "Carbohydrates", "Sugar", "Protein"]
+    
+    var itemsStats = [String:Int]()
 
     @IBOutlet weak var itemNutritionTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        itemNutritionTableView.delegate = self
+        itemNutritionTableView.dataSource = self
 
         // Do any additional setup after loading the view.
     }
     
-
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return itemsStats.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "itemNutritionCell") as! ItemNutritionCell
+        cell.typeLabel.text = types[indexPath.row]
+        return cell
+    }
     /*
     // MARK: - Navigation
 
