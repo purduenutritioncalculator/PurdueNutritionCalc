@@ -18,6 +18,8 @@
 		BCB87F7B2246B25100ED7B35 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB87F7A2246B25100ED7B35 /* MenuCell.swift */; };
 		BCDED9F4224540BD00156052 /* MealTypeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDED9F3224540BD00156052 /* MealTypeController.swift */; };
 		BCDED9F62245422E00156052 /* MealSelectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDED9F52245422E00156052 /* MealSelectCell.swift */; };
+		BCF6194A224988FD009E61CC /* ItemNutritionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF61949224988FD009E61CC /* ItemNutritionViewController.swift */; };
+		BCF6194C22498983009E61CC /* ItemNutritionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF6194B22498983009E61CC /* ItemNutritionCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		BCB87F7A2246B25100ED7B35 /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		BCDED9F3224540BD00156052 /* MealTypeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealTypeController.swift; sourceTree = "<group>"; };
 		BCDED9F52245422E00156052 /* MealSelectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealSelectCell.swift; sourceTree = "<group>"; };
+		BCF61949224988FD009E61CC /* ItemNutritionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemNutritionViewController.swift; sourceTree = "<group>"; };
+		BCF6194B22498983009E61CC /* ItemNutritionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemNutritionCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +82,8 @@
 				BCDED9F52245422E00156052 /* MealSelectCell.swift */,
 				BCB87F782246B1B800ED7B35 /* MenuViewController.swift */,
 				BCB87F7A2246B25100ED7B35 /* MenuCell.swift */,
+				BCF61949224988FD009E61CC /* ItemNutritionViewController.swift */,
+				BCF6194B22498983009E61CC /* ItemNutritionCell.swift */,
 			);
 			path = NutritionCalc;
 			sourceTree = "<group>";
@@ -153,10 +159,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCF6194A224988FD009E61CC /* ItemNutritionViewController.swift in Sources */,
 				715E6729224056D90025BA04 /* ViewController.swift in Sources */,
 				BC5B1C5A2242F83F007727A0 /* DiningCourtViewController.swift in Sources */,
 				BCDED9F4224540BD00156052 /* MealTypeController.swift in Sources */,
 				BCB87F792246B1B800ED7B35 /* MenuViewController.swift in Sources */,
+				BCF6194C22498983009E61CC /* ItemNutritionCell.swift in Sources */,
 				BC5B1C5C2242F953007727A0 /* DiningCourtCell.swift in Sources */,
 				BCDED9F62245422E00156052 /* MealSelectCell.swift in Sources */,
 				BCB87F7B2246B25100ED7B35 /* MenuCell.swift in Sources */,
