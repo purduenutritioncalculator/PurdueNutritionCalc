@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7140818E224988A000AC7C45 /* APIModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7140818D224988A000AC7C45 /* APIModels.swift */; };
+		7140819122498C9A00AC7C45 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7140819022498C9A00AC7C45 /* APICaller.swift */; };
 		715E6727224056D90025BA04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715E6726224056D90025BA04 /* AppDelegate.swift */; };
 		715E6729224056D90025BA04 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715E6728224056D90025BA04 /* ViewController.swift */; };
 		715E672C224056D90025BA04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 715E672A224056D90025BA04 /* Main.storyboard */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7140818D224988A000AC7C45 /* APIModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIModels.swift; sourceTree = "<group>"; };
+		7140819022498C9A00AC7C45 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		715E6723224056D90025BA04 /* NutritionCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NutritionCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		715E6726224056D90025BA04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		715E6728224056D90025BA04 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +73,8 @@
 				715E6726224056D90025BA04 /* AppDelegate.swift */,
 				715E6728224056D90025BA04 /* ViewController.swift */,
 				715E672A224056D90025BA04 /* Main.storyboard */,
+				7140818D224988A000AC7C45 /* APIModels.swift */,
+				7140819022498C9A00AC7C45 /* APICaller.swift */,
 				715E672D224056E30025BA04 /* Assets.xcassets */,
 				715E672F224056E30025BA04 /* LaunchScreen.storyboard */,
 				715E6732224056E30025BA04 /* Info.plist */,
@@ -153,8 +159,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7140818E224988A000AC7C45 /* APIModels.swift in Sources */,
 				715E6729224056D90025BA04 /* ViewController.swift in Sources */,
 				BC5B1C5A2242F83F007727A0 /* DiningCourtViewController.swift in Sources */,
+				7140819122498C9A00AC7C45 /* APICaller.swift in Sources */,
 				BCDED9F4224540BD00156052 /* MealTypeController.swift in Sources */,
 				BCB87F792246B1B800ED7B35 /* MenuViewController.swift in Sources */,
 				BC5B1C5C2242F953007727A0 /* DiningCourtCell.swift in Sources */,
