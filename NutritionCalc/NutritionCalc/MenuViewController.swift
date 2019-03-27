@@ -36,6 +36,9 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
             self.diningCourt = diningCourt
             print(diningCourt)
             self.setMealTypeIndex()
+            
+            self.menuTableView.rowHeight = UITableView.automaticDimension
+            self.menuTableView.estimatedRowHeight = 100
             self.menuTableView.reloadData()
         })
     }
