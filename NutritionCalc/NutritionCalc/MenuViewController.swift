@@ -23,6 +23,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         menuTableView.delegate = self
         menuTableView.dataSource = self
         
+        
         let date = Date()
         let formatter = DateFormatter()
         formatter.dateFormat = "MM-dd-yyyy"
