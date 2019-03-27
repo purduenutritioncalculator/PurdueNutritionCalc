@@ -73,7 +73,7 @@ class MealTypeController: UIViewController, UITableViewDataSource, UITableViewDe
         let mealType = meals[indexPath.row]["Name"] as! String
         let menuViewController = segue.destination as! MenuViewController
         
-        menuViewController.diningCourt = diningCourt
+        menuViewController.name = diningCourt
         menuViewController.mealType = mealType
         menuViewController.meals = meals
     }
