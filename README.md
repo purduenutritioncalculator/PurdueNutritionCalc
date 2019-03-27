@@ -108,6 +108,5 @@ Menu Detailed Item View
  
 ## Progress Gifs for Sprint 1
 
-<img src="http://www.giphy.com/gifs/y3vDTgJgrkPc8RHduG" width=250><br>
-
+![Sprint1Gif.gif]
 
