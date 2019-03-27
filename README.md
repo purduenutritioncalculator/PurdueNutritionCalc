@@ -108,5 +108,5 @@ Menu Detailed Item View
  
 ## Progress Gifs for Sprint 1
 
-![Sprint1Gif.gif]
+![](Sprint1Gif.gif)
 
