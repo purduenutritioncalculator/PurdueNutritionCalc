@@ -106,4 +106,8 @@ Meal Select View
 Menu Detailed Item View
  * GET request for chosen item's information
  
+## Progress Gifs for Sprint 1
+
+<img src="http://www.giphy.com/gifs/y3vDTgJgrkPc8RHduG" width=250><br>
+
 
