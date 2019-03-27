@@ -31,4 +31,8 @@ struct APICaller {
         
     }
     
+    static func getInfoForFoodItem(id: String, completion: @escaping () -> Void) {
+        
+    }
+    
 }

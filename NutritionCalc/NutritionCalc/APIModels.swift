@@ -30,7 +30,7 @@ struct DiningCourt: Decodable {
 
 struct Meal: Decodable {
     
-    let `Type`:String
+    let `Type`:String  // Breakfast, Lunch, or Dinner
     let Stations:[Station]
     
 }
@@ -52,6 +52,8 @@ struct Item: Decodable {
 struct ItemDetail: Decodable {
     
     let ID:String
+    let Name: String
+    let Nutrition: [String:String]
     let Calories: Int
     let Fat: Int
     let Carbs: Int
