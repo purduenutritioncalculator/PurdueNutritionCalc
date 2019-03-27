@@ -61,7 +61,31 @@ struct ItemDetail: Decodable {
         self.Nutrition = []
     }
     
+    enum CodingKeys: String, CodingKey {
+        case ID = "ID"
+        case Name = "Name"
+        case Nutrition = "Nutrition"
+    }
     
+    init(ID: String, name: String, nutrition: [NutritionItem]) {
+        self.ID = ID
+        self.Name = name;
+        self.Nutrition = nutrition
+    }
+    
+}
+
+extension ItemDetail {
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        
+        let ID = try? container.decode(String.self, forKey: .ID)
+        let name = try? container.decode(String.self, forKey: .Name)
+        let Nutrition = try? container.decode([NutritionItem].self, forKey: .Nutrition)
+        
+        self.init(ID: ID ?? "", name: name ?? "", nutrition: Nutrition ?? [])
+        
+    }
 }
 
 struct NutritionItem: Decodable {
@@ -88,9 +112,8 @@ extension NutritionItem {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         
         let name = try? container.decode(String.self, forKey: .Name)
-        let labelValue = try? container.decode(String.self, forKey: .Name)
-        let ordinal = try? container.decode(Int.self, forKey: .Name)
-        
+        let labelValue = try? container.decode(String.self, forKey: .LabelValue)
+        let ordinal = try? container.decode(Int.self, forKey: .Ordinal)
         
         self.init(name: name ?? "", labelValue: labelValue ?? "", ordinal: ordinal ?? 0)
     }
