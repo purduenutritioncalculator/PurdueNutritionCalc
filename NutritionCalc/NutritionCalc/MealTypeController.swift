@@ -31,6 +31,9 @@ class MealTypeController: UIViewController, UITableViewDataSource, UITableViewDe
         formatter.dateFormat = "MM-dd-yyyy"
         let result = formatter.string(from: date)
         
+        if diningCourt.contains(" ") {
+            diningCourt = diningCourt.replacingOccurrences(of: " ", with: "%20")
+        }
         print("Dining court: \(diningCourt) Date: \(result)")
         
         let url = URL(string: "https://api.hfs.purdue.edu/menus/v2/locations/\(diningCourt)/\(result)")!
