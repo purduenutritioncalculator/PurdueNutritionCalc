@@ -15,11 +15,6 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     var name = ""
     var mealType = ""
     var mealTypeIndex = -1
-
-    var meals = [[String: Any]]()
-    var selectedMeal = [[String: Any]]()
-    // menu is an dictionary which has the item name and id
-    var menu = [String:String]()
     var diningCourt = DiningCourt()
 
     override func viewDidLoad() {
@@ -88,10 +83,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
         
     }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        <#code#>
-    }
+
     /*
     // MARK: - Navigation
 
