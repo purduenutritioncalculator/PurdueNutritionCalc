@@ -17,6 +17,10 @@ class DiningCourtViewController: UIViewController, UITableViewDelegate, UITableV
         super.viewDidLoad()
         diningCourtTableView.delegate = self
         diningCourtTableView.dataSource = self
+        
+        let backgroundImage = UIImageView(image: UIImage(named: "backgroundlogo"))
+        backgroundImage.contentMode = .scaleAspectFit
+        diningCourtTableView.backgroundView = backgroundImage
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
