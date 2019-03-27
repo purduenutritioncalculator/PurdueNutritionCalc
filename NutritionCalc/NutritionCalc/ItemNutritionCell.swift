@@ -10,7 +10,6 @@ import UIKit
 
 class ItemNutritionCell: UITableViewCell {
     @IBOutlet weak var typeLabel: UILabel!
-    
     @IBOutlet weak var quantityLabel: UILabel!
     
     override func awakeFromNib() {

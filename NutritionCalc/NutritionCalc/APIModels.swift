@@ -30,7 +30,7 @@ struct DiningCourt: Decodable {
 
 struct Meal: Decodable {
     
-    let `Type`:String  // Breakfast, Lunch, or Dinner
+    let Name:String  // Breakfast, Lunch, or Dinner
     let Stations:[Station]
     
 }
@@ -53,11 +53,46 @@ struct ItemDetail: Decodable {
     
     let ID:String
     let Name: String
-    let Nutrition: [String:String]
-    let Calories: Int
-    let Fat: Int
-    let Carbs: Int
-    let Sugar: Int
-    let Protein: Int
+    let Nutrition: [NutritionItem]
+    
+    init () {
+        self.ID = ""
+        self.Name = ""
+        self.Nutrition = []
+    }
+    
+    
+}
+
+struct NutritionItem: Decodable {
+    let Name:String
+    let LabelValue:String
+    let Ordinal: Int
+    
+    init(name: String, labelValue: String, ordinal: Int) {
+        self.Name = name
+        self.LabelValue = labelValue
+        self.Ordinal = ordinal
+    }
+    
+    enum CodingKeys: String, CodingKey {
+        case Name = "Name"
+        case LabelValue = "LabelValue"
+        case Ordinal = "Ordinal"
+    }
+}
+
+extension NutritionItem {
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        
+        let name = try? container.decode(String.self, forKey: .Name)
+        let labelValue = try? container.decode(String.self, forKey: .Name)
+        let ordinal = try? container.decode(Int.self, forKey: .Name)
+        
+        
+        self.init(name: name ?? "", labelValue: labelValue ?? "", ordinal: ordinal ?? 0)
+    }
     
 }

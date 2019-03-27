@@ -31,7 +31,24 @@ struct APICaller {
         
     }
     
-    static func getInfoForFoodItem(id: String, completion: @escaping () -> Void) {
+    static func getInfoForFoodItem(id: String, completion: @escaping (ItemDetail) -> Void) {
+        let decoder = JSONDecoder()
+        var result:ItemDetail = ItemDetail()
+        
+        let url = URL(string: "https://api.hfs.purdue.edu/menus/v2/items/\(id)")!
+        let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
+        let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
+        let task = session.dataTask(with: request) { (data, response, error) in
+            // This will run when the network request returns
+            if let error = error {
+                print(error.localizedDescription)
+            } else if let data = data {
+                print("decoding...\n")
+                result = try! decoder.decode(ItemDetail.self, from: data)
+                completion(result)
+            }
+        }
+        task.resume()
         
     }
     

@@ -154,7 +154,6 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="itemLabel" destination="NHZ-nR-5ei" id="dAc-87-zHT"/>
-                                            <segue destination="psZ-j7-jCe" kind="show" id="DHp-5S-yFr"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -165,6 +164,7 @@
                     </view>
                     <connections>
                         <outlet property="menuTableView" destination="a4h-Nq-WIJ" id="WVc-gg-eJe"/>
+                        <segue destination="psZ-j7-jCe" kind="show" identifier="toItemDetail" id="8AM-4H-v5Y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vRF-Dl-kXc" userLabel="First Responder" sceneMemberID="firstResponder"/>

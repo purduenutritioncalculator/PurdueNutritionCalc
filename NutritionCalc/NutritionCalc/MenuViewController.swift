@@ -42,7 +42,8 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     func setMealTypeIndex() {
         var index = 0
         for entry in diningCourt.Meals {
-            if entry.Type == mealType {
+            //print(entry.Name + "\n")
+            if entry.Name == mealType {
                 mealTypeIndex = index
                 break
             }
@@ -83,15 +84,23 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
         
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "toItemDetail", sender: menuTableView.cellForRow(at: indexPath))
+    }
 
-    /*
+    
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        let sendingCell = sender as! MenuCell
+        let dest = segue.destination as! ItemNutritionViewController
+        
+        if let indexPath = menuTableView.indexPath(for: sendingCell) {
+            dest.ID = diningCourt.Meals[mealTypeIndex].Stations[indexPath.section].Items[indexPath.row-1].ID
+        }
     }
-    */
+ 
 
 }

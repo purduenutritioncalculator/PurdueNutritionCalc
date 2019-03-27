@@ -12,7 +12,8 @@ class ItemNutritionViewController: UIViewController, UITableViewDataSource, UITa
     
     var types = ["Calories", "Total Fat", "Carbohydrates", "Sugar", "Protein"]
     
-    var itemsStats = [String:Int]()
+    var item: ItemDetail = ItemDetail()
+    var ID: String = ""
 
     @IBOutlet weak var itemNutritionTableView: UITableView!
     override func viewDidLoad() {
@@ -21,15 +22,20 @@ class ItemNutritionViewController: UIViewController, UITableViewDataSource, UITa
         itemNutritionTableView.dataSource = self
 
         // Do any additional setup after loading the view.
+        APICaller.getInfoForFoodItem(id: self.ID) { (itemDetail) in
+            self.item = itemDetail
+            self.itemNutritionTableView.reloadData()
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return itemsStats.count
+        return item.Nutrition.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "itemNutritionCell") as! ItemNutritionCell
-        cell.typeLabel.text = types[indexPath.row]
+        cell.typeLabel.text = item.Nutrition[indexPath.row].Name
+        cell.quantityLabel.text = item.Nutrition[indexPath.row].LabelValue
         return cell
     }
     /*

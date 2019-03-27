@@ -75,6 +75,5 @@ class MealTypeController: UIViewController, UITableViewDataSource, UITableViewDe
         
         menuViewController.name = diningCourt
         menuViewController.mealType = mealType
-        menuViewController.meals = meals
     }
 }
