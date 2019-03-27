@@ -80,6 +80,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         if (indexPath.row == 0) {
             cell.itemLabel.text = diningCourt.Meals[mealTypeIndex].Stations[indexPath.section].Name
             cell.backgroundColor = UIColor(red: 255, green: 0, blue: 0, alpha: 0.1)
+            cell.isUserInteractionEnabled = false
             return cell
         } else {
             cell.itemLabel.text = diningCourt.Meals[mealTypeIndex].Stations[indexPath.section].Items[indexPath.row-1].Name
