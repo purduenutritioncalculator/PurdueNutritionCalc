@@ -20,18 +20,18 @@ Product Spec
 
 **Required Must-have Stories**
 
- [] User can see calorie/nutritional info for all items at all dining courts.
- [] User can "add to an order," which will add caloric/nutritional info of chosen foods and calculate total values.
- [] User can view past meals and past data.
+ [X] User can see calorie/nutritional info for all items at all dining courts.
+ [ ] User can "add to an order," which will add caloric/nutritional info of chosen foods and calculate total values.
+ [ ] User can view past meals and past data.
 
 **Optional Nice-to-have Stories**
 
- [] Can tell user closest dining court
- [] Data visualization for graphs/progress meters
- [] Calorie/nutritional goals
- [] Alerts for when dining courts close if you haven't eaten a meal
- [] Tell which dining court has healthiest food for the day (least fat/sugar)
- [] Calculate nutritional needs for a user's height/weight
+ [ ] Can tell user closest dining court
+ [ ] Data visualization for graphs/progress meters
+ [ ] Calorie/nutritional goals
+ [ ] Alerts for when dining courts close if you haven't eaten a meal
+ [ ] Tell which dining court has healthiest food for the day (least fat/sugar)
+ [ ] Calculate nutritional needs for a user's height/weight
 
 ## 2. Screen Archetypes
 
