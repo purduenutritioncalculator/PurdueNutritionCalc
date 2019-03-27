@@ -106,4 +106,7 @@ Meal Select View
 Menu Detailed Item View
  * GET request for chosen item's information
  
+## Progress Gifs for Sprint 1
+
+![](Sprint1Gif.gif)
 
