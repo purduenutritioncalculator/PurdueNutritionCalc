@@ -13,4 +13,5 @@ struct meal {
     var protein:Int
     var fat:Int
     var carbs:Int
+    var foods:[String]
 }
