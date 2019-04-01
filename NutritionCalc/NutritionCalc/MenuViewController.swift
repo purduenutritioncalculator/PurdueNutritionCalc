@@ -16,6 +16,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     var mealType = ""
     var mealTypeIndex = -1
     var diningCourt = DiningCourt()
+    var userMeal:UserMeal = UserMeal()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -104,8 +105,11 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         if let indexPath = menuTableView.indexPath(for: sendingCell) {
             dest.ID = diningCourt.Meals[mealTypeIndex].Stations[indexPath.section].Items[indexPath.row-1].ID
+            dest.userMeal = self.userMeal
         }
     }
  
-
+    @IBAction func unwindToItemList(for unwindSegue: UIStoryboardSegue, towards subsequentVC: UIViewController) {
+        print("unwound!")
+    }
 }

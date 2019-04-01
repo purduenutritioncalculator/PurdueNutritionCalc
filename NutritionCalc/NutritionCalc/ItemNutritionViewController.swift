@@ -14,6 +14,7 @@ class ItemNutritionViewController: UIViewController, UITableViewDataSource, UITa
     
     var item: ItemDetail = ItemDetail()
     var ID: String = ""
+    var userMeal:UserMeal = UserMeal()
 
     @IBOutlet weak var itemNutritionTableView: UITableView!
     override func viewDidLoad() {
@@ -38,14 +39,37 @@ class ItemNutritionViewController: UIViewController, UITableViewDataSource, UITa
         cell.quantityLabel.text = item.Nutrition[indexPath.row].LabelValue
         return cell
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if let dest = segue.destination as? MenuViewController {
+            dest.userMeal = self.userMeal
+        }
     }
-    */
+ 
 
+    @IBAction func addItemtoMeal(_ sender: Any) {
+        self.userMeal.foods.append(item.Name)
+        
+        let calString = item.Nutrition[1].LabelValue
+        let calories = Int(calString.filter("01234567890.".contains))!
+        
+        let fatString = item.Nutrition[3].LabelValue
+        let fat = Int(fatString.filter("01234567890.".contains))!
+        
+        let carbString = item.Nutrition[7].LabelValue
+        let carbs = Int(carbString.filter("01234567890.".contains))!
+        
+        let proteinString = item.Nutrition[10].LabelValue
+        let protein = Int(proteinString.filter("01234567890.".contains))!
+        
+        self.userMeal.calories += calories
+        self.userMeal.carbs += carbs
+        self.userMeal.fat += fat
+        self.userMeal.protein += protein
+        
+        print(self.userMeal)
+        
+    }
+    
+    
 }

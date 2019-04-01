@@ -8,10 +8,18 @@
 
 import Foundation
 
-struct meal {
+struct UserMeal {
     var calories:Int
     var protein:Int
     var fat:Int
     var carbs:Int
     var foods:[String]
+    
+    init() {
+        calories = 0
+        protein = 0
+        fat = 0
+        carbs = 0
+        foods = []
+    }
 }

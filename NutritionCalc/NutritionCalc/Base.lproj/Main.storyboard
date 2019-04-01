@@ -169,9 +169,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Irh-bP-P5e">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Irh-bP-P5e">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="467"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="itemNutritionCell" id="RhB-Ye-eSy" customClass="ItemNutritionCell" customModule="NutritionCalc" customModuleProvider="target">
@@ -204,8 +203,26 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AUo-yh-SY6">
+                                <rect key="frame" x="231" y="607" width="139" height="50"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="Add to order"/>
+                                <connections>
+                                    <action selector="addItemtoMeal:" destination="psZ-j7-jCe" eventType="touchUpInside" id="uHm-e4-tkK"/>
+                                    <segue destination="tUW-li-54D" kind="unwind" unwindAction="unwindToItemListFor:towards:" id="UFe-J3-50M"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Irh-bP-P5e" firstAttribute="top" secondItem="XLG-cy-QJM" secondAttribute="top" id="G2d-cV-ty5"/>
+                            <constraint firstAttribute="trailing" secondItem="AUo-yh-SY6" secondAttribute="trailing" constant="5" id="H3U-Sf-dGq"/>
+                            <constraint firstItem="Irh-bP-P5e" firstAttribute="bottom" secondItem="DrV-2X-9Kh" secondAttribute="bottom" constant="-200" id="NJq-dS-WJI"/>
+                            <constraint firstItem="Irh-bP-P5e" firstAttribute="leading" secondItem="DrV-2X-9Kh" secondAttribute="leading" id="Szt-ur-OWo"/>
+                            <constraint firstItem="Irh-bP-P5e" firstAttribute="trailing" secondItem="DrV-2X-9Kh" secondAttribute="trailing" id="V2R-fP-Vxi"/>
+                            <constraint firstItem="AUo-yh-SY6" firstAttribute="top" secondItem="Irh-bP-P5e" secondAttribute="bottom" constant="140" id="eyz-Z6-s4P"/>
+                            <constraint firstItem="DrV-2X-9Kh" firstAttribute="bottom" secondItem="AUo-yh-SY6" secondAttribute="bottom" constant="10" id="pIN-fG-Pxn"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="DrV-2X-9Kh"/>
                     </view>
                     <connections>
@@ -213,26 +230,41 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ehd-ia-470" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="tUW-li-54D" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-954.39999999999998" y="3946.7766116941534"/>
         </scene>
-        <!--View Controller-->
+        <!--Home Screen View Controller-->
         <scene sceneID="let-Hx-NId">
             <objects>
-                <viewController id="xCp-RM-DWw" sceneMemberID="viewController">
+                <viewController id="xCp-RM-DWw" customClass="HomeScreenViewController" customModule="NutritionCalc" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BV8-Hc-taC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uOB-p7-d0G">
+                                <rect key="frame" x="86" y="306.5" width="203" height="54"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <state key="normal" title="Start an order"/>
+                                <connections>
+                                    <action selector="startOrder:" destination="xCp-RM-DWw" eventType="touchUpInside" id="ct9-oq-o1e"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="uOB-p7-d0G" firstAttribute="centerY" secondItem="BV8-Hc-taC" secondAttribute="centerY" id="36G-9g-DJB"/>
+                            <constraint firstItem="uOB-p7-d0G" firstAttribute="centerX" secondItem="BV8-Hc-taC" secondAttribute="centerX" id="ZGx-J3-oC3"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="jdK-fs-qoA"/>
                     </view>
                     <connections>
-                        <segue destination="wwo-4I-s0O" kind="show" id="O3e-sn-OeC"/>
+                        <segue destination="wwo-4I-s0O" kind="show" identifier="beginOrder" id="O3e-sn-OeC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yb6-4J-f7g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1919" y="380"/>
+            <point key="canvasLocation" x="-954" y="-331"/>
         </scene>
         <!--Item 1-->
         <scene sceneID="gSA-0N-lXN">

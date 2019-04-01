@@ -14,6 +14,7 @@
 		715E672C224056D90025BA04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 715E672A224056D90025BA04 /* Main.storyboard */; };
 		715E672E224056E30025BA04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 715E672D224056E30025BA04 /* Assets.xcassets */; };
 		715E6731224056E30025BA04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 715E672F224056E30025BA04 /* LaunchScreen.storyboard */; };
+		71D1D00E2252C7D7007BB313 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D1D00D2252C7D7007BB313 /* HomeScreenViewController.swift */; };
 		BC4EB60D2252C4AC00085529 /* mealStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4EB60C2252C4AC00085529 /* mealStruct.swift */; };
 		BC5B1C5A2242F83F007727A0 /* DiningCourtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5B1C592242F83F007727A0 /* DiningCourtViewController.swift */; };
 		BC5B1C5C2242F953007727A0 /* DiningCourtCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5B1C5B2242F953007727A0 /* DiningCourtCell.swift */; };
@@ -35,6 +36,7 @@
 		715E672D224056E30025BA04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		715E6730224056E30025BA04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		715E6732224056E30025BA04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		71D1D00D2252C7D7007BB313 /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
 		BC4EB60C2252C4AC00085529 /* mealStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mealStruct.swift; sourceTree = "<group>"; };
 		BC5B1C592242F83F007727A0 /* DiningCourtViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiningCourtViewController.swift; sourceTree = "<group>"; };
 		BC5B1C5B2242F953007727A0 /* DiningCourtCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiningCourtCell.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 				715E6726224056D90025BA04 /* AppDelegate.swift */,
 				715E6728224056D90025BA04 /* ViewController.swift */,
 				715E672A224056D90025BA04 /* Main.storyboard */,
+				71D1D00D2252C7D7007BB313 /* HomeScreenViewController.swift */,
 				7140818D224988A000AC7C45 /* APIModels.swift */,
 				7140819022498C9A00AC7C45 /* APICaller.swift */,
 				715E672D224056E30025BA04 /* Assets.xcassets */,
@@ -181,6 +184,7 @@
 				BCDED9F62245422E00156052 /* MealSelectCell.swift in Sources */,
 				BCB87F7B2246B25100ED7B35 /* MenuCell.swift in Sources */,
 				715E6727224056D90025BA04 /* AppDelegate.swift in Sources */,
+				71D1D00E2252C7D7007BB313 /* HomeScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
