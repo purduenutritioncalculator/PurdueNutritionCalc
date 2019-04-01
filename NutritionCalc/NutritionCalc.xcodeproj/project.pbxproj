@@ -14,6 +14,7 @@
 		715E672C224056D90025BA04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 715E672A224056D90025BA04 /* Main.storyboard */; };
 		715E672E224056E30025BA04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 715E672D224056E30025BA04 /* Assets.xcassets */; };
 		715E6731224056E30025BA04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 715E672F224056E30025BA04 /* LaunchScreen.storyboard */; };
+		BC4EB60D2252C4AC00085529 /* mealStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4EB60C2252C4AC00085529 /* mealStruct.swift */; };
 		BC5B1C5A2242F83F007727A0 /* DiningCourtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5B1C592242F83F007727A0 /* DiningCourtViewController.swift */; };
 		BC5B1C5C2242F953007727A0 /* DiningCourtCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5B1C5B2242F953007727A0 /* DiningCourtCell.swift */; };
 		BCB87F792246B1B800ED7B35 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB87F782246B1B800ED7B35 /* MenuViewController.swift */; };
@@ -34,6 +35,7 @@
 		715E672D224056E30025BA04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		715E6730224056E30025BA04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		715E6732224056E30025BA04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC4EB60C2252C4AC00085529 /* mealStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mealStruct.swift; sourceTree = "<group>"; };
 		BC5B1C592242F83F007727A0 /* DiningCourtViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiningCourtViewController.swift; sourceTree = "<group>"; };
 		BC5B1C5B2242F953007727A0 /* DiningCourtCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiningCourtCell.swift; sourceTree = "<group>"; };
 		BCB87F782246B1B800ED7B35 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 				BCB87F7A2246B25100ED7B35 /* MenuCell.swift */,
 				BCF61949224988FD009E61CC /* ItemNutritionViewController.swift */,
 				BCF6194B22498983009E61CC /* ItemNutritionCell.swift */,
+				BC4EB60C2252C4AC00085529 /* mealStruct.swift */,
 			);
 			path = NutritionCalc;
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 				BCF6194A224988FD009E61CC /* ItemNutritionViewController.swift in Sources */,
 				715E6729224056D90025BA04 /* ViewController.swift in Sources */,
 				BC5B1C5A2242F83F007727A0 /* DiningCourtViewController.swift in Sources */,
+				BC4EB60D2252C4AC00085529 /* mealStruct.swift in Sources */,
 				7140819122498C9A00AC7C45 /* APICaller.swift in Sources */,
 				BCDED9F4224540BD00156052 /* MealTypeController.swift in Sources */,
 				BCB87F792246B1B800ED7B35 /* MenuViewController.swift in Sources */,
