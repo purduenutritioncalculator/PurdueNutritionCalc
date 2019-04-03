@@ -31,8 +31,9 @@
         <scene sceneID="z0n-fr-XFD">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Yrt-69-c09" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Profile" id="RX5-6E-sCh"/>
+                    <tabBarItem key="tabBarItem" title="Profile" id="7AM-JC-JJ0"/>
                     <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Wgw-8d-C3L">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xCp-RM-DWw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TdL-fh-BOD">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -181,7 +181,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Irh-bP-P5e">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="467"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="418"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="itemNutritionCell" id="RhB-Ye-eSy" customClass="ItemNutritionCell" customModule="NutritionCalc" customModuleProvider="target">
@@ -215,7 +215,7 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AUo-yh-SY6">
-                                <rect key="frame" x="231" y="607" width="139" height="50"/>
+                                <rect key="frame" x="231" y="558" width="139" height="50"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <state key="normal" title="Add to order"/>
                                 <connections>
@@ -269,32 +269,34 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jdK-fs-qoA"/>
                     </view>
+                    <navigationItem key="navigationItem" id="AdB-Ae-B4h"/>
                     <connections>
-                        <segue destination="wwo-4I-s0O" kind="show" identifier="beginOrder" id="O3e-sn-OeC"/>
+                        <segue destination="cjx-nb-Nte" kind="show" identifier="beginOrder" id="svA-Ud-cg5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yb6-4J-f7g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-954" y="-331"/>
+            <point key="canvasLocation" x="-954" y="644"/>
         </scene>
-        <!--Item 1-->
-        <scene sceneID="gSA-0N-lXN">
+        <!--Add Meals-->
+        <scene sceneID="WKR-2a-xhm">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wwo-4I-s0O" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 1" id="KPe-eY-NFS"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TdL-fh-BOD" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Add Meals" id="Yew-uw-O1N"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="KSb-Ll-x8n">
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Uji-sn-L2v">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="cjx-nb-Nte" kind="relationship" relationship="rootViewController" id="qOy-q8-s9p"/>
+                        <segue destination="xCp-RM-DWw" kind="relationship" relationship="rootViewController" id="YU6-XY-UJg"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ud2-CX-TBp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kEr-jd-9jA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-954.39999999999998" y="483.50824587706148"/>
+            <point key="canvasLocation" x="-954" y="-144"/>
         </scene>
     </scenes>
     <resources>
