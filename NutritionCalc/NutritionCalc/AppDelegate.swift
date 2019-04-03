@@ -16,6 +16,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let tabBarStoryBoard = UIStoryboard(name: "TabBar", bundle: nil)
+        let VC = tabBarStoryBoard.instantiateInitialViewController()
+        window?.rootViewController = VC
+        window?.makeKeyAndVisible()
+        
         return true
     }
 
