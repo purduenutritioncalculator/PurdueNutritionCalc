@@ -86,6 +86,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         } else {
             cell.itemLabel.text = diningCourt.Meals[mealTypeIndex].Stations[indexPath.section].Items[indexPath.row-1].Name
             cell.backgroundColor = nil
+            cell.isUserInteractionEnabled = true
             return cell
         }
         
