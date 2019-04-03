@@ -51,16 +51,16 @@ class ItemNutritionViewController: UIViewController, UITableViewDataSource, UITa
         self.userMeal.foods.append(item.Name)
         
         let calString = item.Nutrition[1].LabelValue
-        let calories = Int(calString.filter("01234567890.".contains))!
+        let calories = Int(calString.filter("01234567890.".contains)) ?? 0
         
         let fatString = item.Nutrition[3].LabelValue
-        let fat = Int(fatString.filter("01234567890.".contains))!
+        let fat = Int(fatString.filter("01234567890.".contains)) ?? 0
         
         let carbString = item.Nutrition[7].LabelValue
-        let carbs = Int(carbString.filter("01234567890.".contains))!
+        let carbs = Int(carbString.filter("01234567890.".contains)) ?? 0
         
         let proteinString = item.Nutrition[10].LabelValue
-        let protein = Int(proteinString.filter("01234567890.".contains))!
+        let protein = Int(proteinString.filter("01234567890.".contains)) ?? 0
         
         self.userMeal.calories += calories
         self.userMeal.carbs += carbs
