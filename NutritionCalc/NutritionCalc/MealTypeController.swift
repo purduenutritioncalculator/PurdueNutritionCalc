@@ -47,13 +47,8 @@ class MealTypeController: UIViewController, UITableViewDataSource, UITableViewDe
             } else if let data = data {
                 let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
                 
-                // TODO: Get the array of movies
-                // TODO: Store the movies in a property to use elsewhere
-                // TODO: Reload your table view data
                 self.meals = dataDictionary["Meals"] as! [[String:Any]]
                 
-                //                print(self.meals)
-                print(self.meals[0]["ID"])
                 self.mealSelectTableView.reloadData()
 
             }

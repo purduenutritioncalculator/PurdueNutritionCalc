@@ -35,7 +35,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         // make api call here
         APICaller.getInfoForDiningCourt(diningCourt: name, date: result, completion: { diningCourt in
             self.diningCourt = diningCourt
-            print(diningCourt)
+//            print(diningCourt)
             self.setMealTypeIndex()
             
             self.menuTableView.rowHeight = UITableView.automaticDimension
@@ -101,12 +101,17 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let sendingCell = sender as! MenuCell
-        let dest = segue.destination as! ItemNutritionViewController
-        
-        if let indexPath = menuTableView.indexPath(for: sendingCell) {
-            dest.ID = diningCourt.Meals[mealTypeIndex].Stations[indexPath.section].Items[indexPath.row-1].ID
-            dest.userMeal = self.userMeal
+        if segue.identifier == "toItemDetail" {
+            let sendingCell = sender as! MenuCell
+            let dest = segue.destination as! ItemNutritionViewController
+            
+            if let indexPath = menuTableView.indexPath(for: sendingCell) {
+                dest.ID = diningCourt.Meals[mealTypeIndex].Stations[indexPath.section].Items[indexPath.row-1].ID
+                dest.userMeal = self.userMeal
+            }
+        } else {
+            let dest = segue.destination as! HomeScreenViewController
+            dest.mealList.append(userMeal)
         }
     }
  
@@ -115,6 +120,9 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     @IBAction func onSubmit(_ sender: Any) {
+        print("submit button")
+        // go back to main vc and add the meal to its array
+        self.performSegue(withIdentifier: "submitSegue", sender: nil)
         
     }
 }
