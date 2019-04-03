@@ -21,6 +21,7 @@ class MealTypeController: UIViewController, UITableViewDataSource, UITableViewDe
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = diningCourt
         mealSelectTableView.delegate = self
         mealSelectTableView.dataSource = self
         
