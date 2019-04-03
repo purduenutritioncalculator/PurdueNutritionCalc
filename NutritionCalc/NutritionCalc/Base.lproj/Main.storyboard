@@ -108,7 +108,7 @@
             </objects>
             <point key="canvasLocation" x="-954.39999999999998" y="2349.1754122938532"/>
         </scene>
-        <!--Menu View Controller-->
+        <!--Menu-->
         <scene sceneID="VXq-Hr-azq">
             <objects>
                 <viewController id="N0M-TS-sXI" customClass="MenuViewController" customModule="NutritionCalc" customModuleProvider="target" sceneMemberID="viewController">
@@ -152,6 +152,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="vSa-bd-i60"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Menu" id="7AV-Q9-J7L">
+                        <barButtonItem key="rightBarButtonItem" title="+" image="iconfinder_tick_blue_619551" width="2" id="LJU-cj-QQy">
+                            <inset key="imageInsets" minX="33" minY="0.0" maxX="-41" maxY="-1"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="menuTableView" destination="a4h-Nq-WIJ" id="WVc-gg-eJe"/>
                         <segue destination="psZ-j7-jCe" kind="show" identifier="toItemDetail" id="8AM-4H-v5Y"/>
@@ -286,4 +291,7 @@
             <point key="canvasLocation" x="-954.39999999999998" y="483.50824587706148"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="iconfinder_tick_blue_619551" width="128" height="128"/>
+    </resources>
 </document>
