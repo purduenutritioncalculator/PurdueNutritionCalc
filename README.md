@@ -21,7 +21,7 @@ Product Spec
 **Required Must-have Stories**
 
  - [X] User can see calorie/nutritional info for all items at all dining courts.
- - [ ] User can "add to an order," which will add caloric/nutritional info of chosen foods and calculate total values.
+ - [X] User can "add to an order," which will add caloric/nutritional info of chosen foods and calculate total values.
  - [ ] User can view past meals and past data.
 
 **Optional Nice-to-have Stories**
