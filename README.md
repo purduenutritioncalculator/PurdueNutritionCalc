@@ -110,3 +110,6 @@ Menu Detailed Item View
 
 ![](Sprint1Gif.gif)
 
+## Progress Gifs for Sprint 2
+
+![](Sprint2Gif.gif)
