@@ -17,6 +17,7 @@
 		71D1D00E2252C7D7007BB313 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D1D00D2252C7D7007BB313 /* HomeScreenViewController.swift */; };
 		71D1D01022556729007BB313 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71D1D00F22556729007BB313 /* TabBar.storyboard */; };
 		71D1D012225567F5007BB313 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71D1D011225567F5007BB313 /* Profile.storyboard */; };
+		9FDAF38E2EC0E31751AE85FA /* Pods_NutritionCalc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60E5003D93DE71C1F58AC146 /* Pods_NutritionCalc.framework */; };
 		BC4EB60D2252C4AC00085529 /* mealStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4EB60C2252C4AC00085529 /* mealStruct.swift */; };
 		BC5B1C5A2242F83F007727A0 /* DiningCourtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5B1C592242F83F007727A0 /* DiningCourtViewController.swift */; };
 		BC5B1C5C2242F953007727A0 /* DiningCourtCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5B1C5B2242F953007727A0 /* DiningCourtCell.swift */; };
@@ -29,6 +30,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		60E5003D93DE71C1F58AC146 /* Pods_NutritionCalc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NutritionCalc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		62B90092380EBE2008ACAF46 /* Pods-NutritionCalc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NutritionCalc.release.xcconfig"; path = "Pods/Target Support Files/Pods-NutritionCalc/Pods-NutritionCalc.release.xcconfig"; sourceTree = "<group>"; };
 		7140818D224988A000AC7C45 /* APIModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIModels.swift; sourceTree = "<group>"; };
 		7140819022498C9A00AC7C45 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		715E6723224056D90025BA04 /* NutritionCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NutritionCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -41,6 +44,7 @@
 		71D1D00D2252C7D7007BB313 /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
 		71D1D00F22556729007BB313 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
 		71D1D011225567F5007BB313 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		9DB7C429B1DF691079901FB0 /* Pods-NutritionCalc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NutritionCalc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NutritionCalc/Pods-NutritionCalc.debug.xcconfig"; sourceTree = "<group>"; };
 		BC4EB60C2252C4AC00085529 /* mealStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mealStruct.swift; sourceTree = "<group>"; };
 		BC5B1C592242F83F007727A0 /* DiningCourtViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiningCourtViewController.swift; sourceTree = "<group>"; };
 		BC5B1C5B2242F953007727A0 /* DiningCourtCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiningCourtCell.swift; sourceTree = "<group>"; };
@@ -57,17 +61,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FDAF38E2EC0E31751AE85FA /* Pods_NutritionCalc.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2438601D71FB8A71101D24DC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9DB7C429B1DF691079901FB0 /* Pods-NutritionCalc.debug.xcconfig */,
+				62B90092380EBE2008ACAF46 /* Pods-NutritionCalc.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		715E671A224056D90025BA04 = {
 			isa = PBXGroup;
 			children = (
 				715E6725224056D90025BA04 /* NutritionCalc */,
 				715E6724224056D90025BA04 /* Products */,
+				2438601D71FB8A71101D24DC /* Pods */,
+				92305115AE3246ABCC2467D4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,6 +122,14 @@
 			path = NutritionCalc;
 			sourceTree = "<group>";
 		};
+		92305115AE3246ABCC2467D4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				60E5003D93DE71C1F58AC146 /* Pods_NutritionCalc.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -113,9 +137,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 715E6735224056E30025BA04 /* Build configuration list for PBXNativeTarget "NutritionCalc" */;
 			buildPhases = (
+				E315DC75096C324EE71E7D01 /* [CP] Check Pods Manifest.lock */,
 				715E671F224056D90025BA04 /* Sources */,
 				715E6720224056D90025BA04 /* Frameworks */,
 				715E6721224056D90025BA04 /* Resources */,
+				F170C0D49E646D8A9F635C2F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -173,6 +199,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E315DC75096C324EE71E7D01 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NutritionCalc-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F170C0D49E646D8A9F635C2F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-NutritionCalc/Pods-NutritionCalc-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/M13ProgressSuite/M13ProgressSuite.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/M13ProgressSuite.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NutritionCalc/Pods-NutritionCalc-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		715E671F224056D90025BA04 /* Sources */ = {
@@ -336,6 +409,7 @@
 		};
 		715E6736224056E30025BA04 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9DB7C429B1DF691079901FB0 /* Pods-NutritionCalc.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -354,6 +428,7 @@
 		};
 		715E6737224056E30025BA04 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 62B90092380EBE2008ACAF46 /* Pods-NutritionCalc.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
