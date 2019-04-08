@@ -42,6 +42,8 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
             self.menuTableView.estimatedRowHeight = 100
             self.menuTableView.reloadData()
         })
+        
+        self.userMeal.date = Date()
     }
     
     func setMealTypeIndex() {
@@ -109,7 +111,12 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
                 dest.ID = diningCourt.Meals[mealTypeIndex].Stations[indexPath.section].Items[indexPath.row-1].ID
                 dest.userMeal = self.userMeal
             }
-        } else {
+        } else if segue.identifier == "viewCurrentOrder" {
+            if let dest = segue.destination as? CurrentOrderViewController {
+                dest.myOrder = userMeal
+            }
+        }
+        else {
             let dest = segue.destination as! HomeScreenViewController
             dest.mealList.append(userMeal)
         }
@@ -125,4 +132,11 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.performSegue(withIdentifier: "submitSegue", sender: nil)
         
     }
+    
+    @IBAction func cancelOrder(_ sender: Any) {
+        print("dismissing")
+        self.navigationController!.popViewController(animated:  true)
+    }
+    
+    
 }
