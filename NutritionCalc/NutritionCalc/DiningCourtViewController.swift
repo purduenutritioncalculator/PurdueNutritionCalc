@@ -18,7 +18,7 @@ class DiningCourtViewController: UIViewController, UITableViewDelegate, UITableV
         diningCourtTableView.delegate = self
         diningCourtTableView.dataSource = self
         
-        let backgroundImage = UIImageView(image: UIImage(named: "backgroundlogo"))
+        let backgroundImage = UIImageView(image: UIImage(named: "purduelogo"))
         backgroundImage.contentMode = .scaleAspectFit
         diningCourtTableView.backgroundView = backgroundImage
     }
