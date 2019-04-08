@@ -1,0 +1,6 @@
+framework module Pods_NutritionCalc {
+  umbrella header "Pods-NutritionCalc-umbrella.h"
+
+  export *
+  module * { export * }
+}
