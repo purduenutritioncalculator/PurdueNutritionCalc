@@ -155,12 +155,24 @@
                         <viewLayoutGuide key="safeArea" id="vSa-bd-i60"/>
                     </view>
                     <navigationItem key="navigationItem" title="Menu" id="7AV-Q9-J7L">
-                        <barButtonItem key="rightBarButtonItem" title="+" image="iconfinder_tick_blue_619551" width="2" id="LJU-cj-QQy">
-                            <inset key="imageInsets" minX="33" minY="0.0" maxX="-41" maxY="-1"/>
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="dn2-Ty-ic9">
                             <connections>
-                                <action selector="onSubmit:" destination="N0M-TS-sXI" id="Tn6-lh-zBO"/>
+                                <action selector="cancelOrder:" destination="N0M-TS-sXI" id="T2h-eg-n5L"/>
                             </connections>
                         </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="View Order" id="F0C-DK-oZp">
+                                <connections>
+                                    <segue destination="f26-BJ-anT" kind="show" identifier="viewCurrentOrder" id="1Ae-cW-COO"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Item" image="iconfinder_tick_blue_619551" style="plain" id="LJU-cj-QQy">
+                                <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-5"/>
+                                <connections>
+                                    <action selector="onSubmit:" destination="N0M-TS-sXI" id="Tn6-lh-zBO"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="menuTableView" destination="a4h-Nq-WIJ" id="WVc-gg-eJe"/>
@@ -172,6 +184,63 @@
                 <exit id="SmW-w4-VyF" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-954.39999999999998" y="3205.5472263868069"/>
+        </scene>
+        <!--Current Order View Controller-->
+        <scene sceneID="VGO-6l-juR">
+            <objects>
+                <viewController id="f26-BJ-anT" customClass="CurrentOrderViewController" customModule="NutritionCalc" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xbl-kj-4MQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5xF-r7-mxr">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="currentOrderItem" id="NrY-Rn-tZ8" customClass="MenuCell" customModule="NutritionCalc" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NrY-Rn-tZ8" id="AST-C8-2Fn">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="em7-Ia-E3I">
+                                                    <rect key="frame" x="15" y="15" width="210" height="13.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="em7-Ia-E3I" firstAttribute="top" secondItem="AST-C8-2Fn" secondAttribute="top" constant="15" id="J4U-ol-Dcx"/>
+                                                <constraint firstItem="em7-Ia-E3I" firstAttribute="leading" secondItem="AST-C8-2Fn" secondAttribute="leading" constant="15" id="YqY-tU-rDe"/>
+                                                <constraint firstAttribute="bottom" secondItem="em7-Ia-E3I" secondAttribute="bottom" constant="15" id="ais-LY-y27"/>
+                                                <constraint firstAttribute="trailing" secondItem="em7-Ia-E3I" secondAttribute="trailing" constant="150" id="bpT-fX-oe7"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="itemLabel" destination="em7-Ia-E3I" id="kD2-AZ-lyp"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="5xF-r7-mxr" secondAttribute="trailing" id="1u0-yr-v9R"/>
+                            <constraint firstItem="5xF-r7-mxr" firstAttribute="leading" secondItem="xbl-kj-4MQ" secondAttribute="leading" id="3i5-E5-xwp"/>
+                            <constraint firstItem="5xF-r7-mxr" firstAttribute="top" secondItem="xbl-kj-4MQ" secondAttribute="top" id="ifo-3Q-5Pn"/>
+                            <constraint firstAttribute="bottom" secondItem="5xF-r7-mxr" secondAttribute="bottom" id="weL-B0-AG0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="me7-Lr-Ek4"/>
+                    </view>
+                    <connections>
+                        <outlet property="currentOrderTableView" destination="5xF-r7-mxr" id="J28-mz-3Sx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="du9-ex-Ysl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="89" y="3206"/>
         </scene>
         <!--Item Nutrition View Controller-->
         <scene sceneID="dnr-Zc-17S">

@@ -48,7 +48,7 @@ class ItemNutritionViewController: UIViewController, UITableViewDataSource, UITa
  
 
     @IBAction func addItemtoMeal(_ sender: Any) {
-        self.userMeal.foods.append(item.Name)
+        self.userMeal.foods.append(item)
         
         let calString = item.Nutrition[1].LabelValue
         let calories = Int(calString.filter("01234567890.".contains)) ?? 0
