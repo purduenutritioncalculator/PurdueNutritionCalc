@@ -283,7 +283,7 @@
         <scene sceneID="WKR-2a-xhm">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TdL-fh-BOD" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Add Meals" id="Yew-uw-O1N"/>
+                    <tabBarItem key="tabBarItem" title="Add Meals" image="home-icon" id="Yew-uw-O1N"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Uji-sn-L2v">
@@ -301,6 +301,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="home-icon" width="30" height="30"/>
         <image name="iconfinder_tick_blue_619551" width="128" height="128"/>
     </resources>
 </document>
