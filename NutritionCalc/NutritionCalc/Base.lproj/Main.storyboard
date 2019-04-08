@@ -89,6 +89,7 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="mealTypeLabel" destination="Tcx-ek-Qko" id="qc6-58-nh3"/>
                                             <segue destination="N0M-TS-sXI" kind="show" id="isM-Rx-8RZ"/>

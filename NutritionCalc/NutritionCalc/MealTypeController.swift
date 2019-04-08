@@ -25,6 +25,10 @@ class MealTypeController: UIViewController, UITableViewDataSource, UITableViewDe
         mealSelectTableView.delegate = self
         mealSelectTableView.dataSource = self
         
+        let backgroundImage = UIImageView(image: UIImage(named: "purduelogo"))
+        backgroundImage.contentMode = .scaleAspectFit
+        mealSelectTableView.backgroundView = backgroundImage
+        
         mealSelectTableView.rowHeight = 100
         
         let date = Date()
