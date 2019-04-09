@@ -14,6 +14,7 @@
 		715E672C224056D90025BA04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 715E672A224056D90025BA04 /* Main.storyboard */; };
 		715E672E224056E30025BA04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 715E672D224056E30025BA04 /* Assets.xcassets */; };
 		715E6731224056E30025BA04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 715E672F224056E30025BA04 /* LaunchScreen.storyboard */; };
+		719CF831225D295500C81C21 /* CurrentOrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719CF830225D295500C81C21 /* CurrentOrderCell.swift */; };
 		71D1D00E2252C7D7007BB313 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D1D00D2252C7D7007BB313 /* HomeScreenViewController.swift */; };
 		71D1D01022556729007BB313 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71D1D00F22556729007BB313 /* TabBar.storyboard */; };
 		71D1D012225567F5007BB313 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71D1D011225567F5007BB313 /* Profile.storyboard */; };
@@ -43,6 +44,7 @@
 		715E672D224056E30025BA04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		715E6730224056E30025BA04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		715E6732224056E30025BA04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		719CF830225D295500C81C21 /* CurrentOrderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentOrderCell.swift; sourceTree = "<group>"; };
 		71D1D00D2252C7D7007BB313 /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
 		71D1D00F22556729007BB313 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
 		71D1D011225567F5007BB313 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 		719CF82F225D28C000C81C21 /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				719CF830225D295500C81C21 /* CurrentOrderCell.swift */,
 				BC5B1C5B2242F953007727A0 /* DiningCourtCell.swift */,
 				BCDED9F52245422E00156052 /* MealSelectCell.swift */,
 				BCB87F7A2246B25100ED7B35 /* MenuCell.swift */,
@@ -287,6 +290,7 @@
 				BCF6194A224988FD009E61CC /* ItemNutritionViewController.swift in Sources */,
 				715E6729224056D90025BA04 /* ViewController.swift in Sources */,
 				71D1D014225C06A2007BB313 /* CurrentOrderViewController.swift in Sources */,
+				719CF831225D295500C81C21 /* CurrentOrderCell.swift in Sources */,
 				BC5B1C5A2242F83F007727A0 /* DiningCourtViewController.swift in Sources */,
 				BC4EB60D2252C4AC00085529 /* mealStruct.swift in Sources */,
 				7140819122498C9A00AC7C45 /* APICaller.swift in Sources */,
