@@ -116,21 +116,10 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
                 dest.myOrder = userMeal
             }
         }
-        else {
-            let dest = segue.destination as! HomeScreenViewController
-            dest.mealList.append(userMeal)
-        }
     }
  
     @IBAction func unwindToItemList(for unwindSegue: UIStoryboardSegue, towards subsequentVC: UIViewController) {
         print("unwound!")
-    }
-    
-    @IBAction func onSubmit(_ sender: Any) {
-        print("submit button")
-        // go back to main vc and add the meal to its array
-        self.performSegue(withIdentifier: "submitSegue", sender: nil)
-        
     }
     
     @IBAction func cancelOrder(_ sender: Any) {
