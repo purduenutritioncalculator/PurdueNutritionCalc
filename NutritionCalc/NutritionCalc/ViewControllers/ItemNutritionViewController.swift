@@ -15,8 +15,10 @@ class ItemNutritionViewController: UIViewController, UITableViewDataSource, UITa
     var item: ItemDetail = ItemDetail()
     var ID: String = ""
     var userMeal:UserMeal = UserMeal()
-
+    
+    @IBOutlet weak var quantityField: UITextField!
     @IBOutlet weak var itemNutritionTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         itemNutritionTableView.delegate = self
@@ -101,6 +103,21 @@ class ItemNutritionViewController: UIViewController, UITableViewDataSource, UITa
         
         return 0
     }
+    
+    @IBAction func increaseQuantity(_ sender: Any) {
+        var curQuantity = Int(quantityField.text!)!
+        curQuantity += 1
+        quantityField.text = "\(curQuantity)"
+    }
+    
+    @IBAction func decreaseQuantity(_ sender: Any) {
+        var curQuantity = Int(quantityField.text!)!
+        if (curQuantity > 1) {
+            curQuantity -= 1
+            quantityField.text = "\(curQuantity)"
+        }
+    }
+    
     
     
 }

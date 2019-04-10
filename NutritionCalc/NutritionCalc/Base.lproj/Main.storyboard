@@ -373,7 +373,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Irh-bP-P5e">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="536"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="itemNutritionCell" id="RhB-Ye-eSy" customClass="ItemNutritionCell" customModule="NutritionCalc" customModuleProvider="target">
@@ -406,13 +406,52 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5xR-UD-4zi">
+                                <rect key="frame" x="157.5" y="546" width="60" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="QKu-8x-z7B"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Servings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dRh-Jm-Ex9">
+                                <rect key="frame" x="157.5" y="590" width="60" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3jl-DW-Fn9">
+                                <rect key="frame" x="127.5" y="542" width="30" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="-"/>
+                                <connections>
+                                    <action selector="decreaseQuantity:" destination="psZ-j7-jCe" eventType="touchUpInside" id="yLD-8f-akw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5qE-Bs-qpM">
+                                <rect key="frame" x="217.5" y="542" width="30" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="+"/>
+                                <connections>
+                                    <action selector="increaseQuantity:" destination="psZ-j7-jCe" eventType="touchUpInside" id="lW5-xA-4SC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Irh-bP-P5e" firstAttribute="trailing" secondItem="DrV-2X-9Kh" secondAttribute="trailing" id="49w-4V-vML"/>
+                            <constraint firstItem="5qE-Bs-qpM" firstAttribute="leading" secondItem="5xR-UD-4zi" secondAttribute="trailing" id="53W-Ua-iI6"/>
+                            <constraint firstItem="5xR-UD-4zi" firstAttribute="centerX" secondItem="XLG-cy-QJM" secondAttribute="centerX" id="Akn-IQ-FVg"/>
+                            <constraint firstItem="5qE-Bs-qpM" firstAttribute="centerY" secondItem="5xR-UD-4zi" secondAttribute="centerY" id="Qsm-bL-FbU"/>
                             <constraint firstItem="Irh-bP-P5e" firstAttribute="top" secondItem="XLG-cy-QJM" secondAttribute="top" id="Z39-QU-iCq"/>
                             <constraint firstItem="Irh-bP-P5e" firstAttribute="leading" secondItem="DrV-2X-9Kh" secondAttribute="leading" id="Zw9-hw-XDn"/>
-                            <constraint firstItem="DrV-2X-9Kh" firstAttribute="bottom" secondItem="Irh-bP-P5e" secondAttribute="bottom" id="v7K-nw-XJj"/>
+                            <constraint firstItem="5xR-UD-4zi" firstAttribute="leading" secondItem="3jl-DW-Fn9" secondAttribute="trailing" id="geP-e6-wHu"/>
+                            <constraint firstItem="5xR-UD-4zi" firstAttribute="top" secondItem="Irh-bP-P5e" secondAttribute="bottom" constant="10" id="mP5-86-2RG"/>
+                            <constraint firstItem="5xR-UD-4zi" firstAttribute="centerY" secondItem="3jl-DW-Fn9" secondAttribute="centerY" id="q4P-OW-Hvt"/>
+                            <constraint firstItem="DrV-2X-9Kh" firstAttribute="bottom" secondItem="dRh-Jm-Ex9" secondAttribute="bottom" constant="10" id="quc-KQ-24l"/>
+                            <constraint firstItem="dRh-Jm-Ex9" firstAttribute="centerX" secondItem="XLG-cy-QJM" secondAttribute="centerX" id="ucd-an-iUB"/>
+                            <constraint firstItem="dRh-Jm-Ex9" firstAttribute="top" secondItem="5xR-UD-4zi" secondAttribute="bottom" constant="10" id="ych-WI-nvk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DrV-2X-9Kh"/>
                     </view>
@@ -425,6 +464,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="itemNutritionTableView" destination="Irh-bP-P5e" id="ugm-Ag-Bth"/>
+                        <outlet property="quantityField" destination="5xR-UD-4zi" id="y0b-WW-QjP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ehd-ia-470" userLabel="First Responder" sceneMemberID="firstResponder"/>

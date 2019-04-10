@@ -13,7 +13,7 @@ struct UserMeal {
     var protein:Int
     var fat:Int
     var carbs:Int
-    var foods:[ItemDetail]
+    var foods:[[Int:ItemDetail]]
     var date:Date
     
     init() {
