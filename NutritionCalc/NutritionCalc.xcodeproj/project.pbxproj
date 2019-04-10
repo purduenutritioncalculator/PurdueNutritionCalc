@@ -20,6 +20,7 @@
 		71D1D012225567F5007BB313 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71D1D011225567F5007BB313 /* Profile.storyboard */; };
 		71D1D014225C06A2007BB313 /* CurrentOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D1D013225C06A2007BB313 /* CurrentOrderViewController.swift */; };
 		921AC4BA225C0A5900CF4C80 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921AC4B9225C0A5900CF4C80 /* ProfileViewController.swift */; };
+		921AC4BC225EA7CF00CF4C80 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921AC4BB225EA7CF00CF4C80 /* EditProfileViewController.swift */; };
 		9FDAF38E2EC0E31751AE85FA /* Pods_NutritionCalc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60E5003D93DE71C1F58AC146 /* Pods_NutritionCalc.framework */; };
 		BC4EB60D2252C4AC00085529 /* mealStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4EB60C2252C4AC00085529 /* mealStruct.swift */; };
 		BC5B1C5A2242F83F007727A0 /* DiningCourtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5B1C592242F83F007727A0 /* DiningCourtViewController.swift */; };
@@ -50,6 +51,7 @@
 		71D1D011225567F5007BB313 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		71D1D013225C06A2007BB313 /* CurrentOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentOrderViewController.swift; sourceTree = "<group>"; };
 		921AC4B9225C0A5900CF4C80 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		921AC4BB225EA7CF00CF4C80 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		9DB7C429B1DF691079901FB0 /* Pods-NutritionCalc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NutritionCalc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NutritionCalc/Pods-NutritionCalc.debug.xcconfig"; sourceTree = "<group>"; };
 		BC4EB60C2252C4AC00085529 /* mealStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mealStruct.swift; sourceTree = "<group>"; };
 		BC5B1C592242F83F007727A0 /* DiningCourtViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiningCourtViewController.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				BCB87F782246B1B800ED7B35 /* MenuViewController.swift */,
 				BCF61949224988FD009E61CC /* ItemNutritionViewController.swift */,
 				921AC4B9225C0A5900CF4C80 /* ProfileViewController.swift */,
+				921AC4BB225EA7CF00CF4C80 /* EditProfileViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 				BC5B1C5A2242F83F007727A0 /* DiningCourtViewController.swift in Sources */,
 				BC4EB60D2252C4AC00085529 /* mealStruct.swift in Sources */,
 				7140819122498C9A00AC7C45 /* APICaller.swift in Sources */,
+				921AC4BC225EA7CF00CF4C80 /* EditProfileViewController.swift in Sources */,
 				BCDED9F4224540BD00156052 /* MealTypeController.swift in Sources */,
 				BCB87F792246B1B800ED7B35 /* MenuViewController.swift in Sources */,
 				BCF6194C22498983009E61CC /* ItemNutritionCell.swift in Sources */,
