@@ -7,15 +7,25 @@
 //
 
 import UIKit
+import CoreData
 
 class HomeScreenViewController: UIViewController {
     
     var mealList = [UserMeal]()
+    var savedMeals = [MealModel]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let fetchRequest: NSFetchRequest<MealModel> = MealModel.fetchRequest()
 
+        do {
+            let meals = try PersistenceService.context.fetch(fetchRequest)
+            self.savedMeals = meals
+        } catch {
+            print("error")
+        }
         // Do any additional setup after loading the view.
+        print("total meals: \(savedMeals.count)")
     }
     
     override func viewDidAppear(_ animated: Bool) {

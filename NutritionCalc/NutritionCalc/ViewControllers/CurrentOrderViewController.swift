@@ -97,6 +97,14 @@ class CurrentOrderViewController: UIViewController, UITableViewDelegate, UITable
         
         if let dest = segue.destination as? HomeScreenViewController {
             dest.mealList.append(myOrder)
+            let newSavedMeal = MealModel(context: PersistenceService.context)
+            newSavedMeal.calories = Int16(myOrder.calories)
+            newSavedMeal.carbs = Int16(myOrder.carbs)
+            newSavedMeal.fats = Int16(myOrder.fat)
+            newSavedMeal.protein = Int16(myOrder.protein)
+            newSavedMeal.date = myOrder.date as NSDate
+            dest.savedMeals.append(newSavedMeal)
+            PersistenceService.saveContext()
         }
         
     }
