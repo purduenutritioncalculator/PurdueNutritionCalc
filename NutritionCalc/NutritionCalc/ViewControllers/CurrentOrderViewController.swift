@@ -112,4 +112,40 @@ class CurrentOrderViewController: UIViewController, UITableViewDelegate, UITable
         return "Unspecified"
     }
 
+    @IBAction func increaseQuantity(_ sender: Any) {
+        
+        let incrButton = sender as! UIButton
+        
+        var superview = incrButton.superview
+        
+        while !(superview is UITableViewCell) {
+            superview = superview?.superview
+        }
+        
+        let sendingCell = superview as! CurrentOrderCell
+        var currentQuantity = Int(sendingCell.quantityField.text!)!
+        currentQuantity = currentQuantity + 1
+        sendingCell.quantityField.text = "\(currentQuantity)"
+        
+    }
+    
+    
+    @IBAction func decreaseQuantity(_ sender: Any) {
+        
+        let incrButton = sender as! UIButton
+        
+        var superview = incrButton.superview
+        
+        while !(superview is UITableViewCell) {
+            superview = superview?.superview
+        }
+        
+        let sendingCell = superview as! CurrentOrderCell
+        var currentQuantity = Int(sendingCell.quantityField.text!)!
+        if currentQuantity > 1 {
+            currentQuantity = currentQuantity - 1
+            sendingCell.quantityField.text = "\(currentQuantity)"
+        }
+        
+    }
 }
