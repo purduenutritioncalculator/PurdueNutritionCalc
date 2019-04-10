@@ -208,7 +208,7 @@
                                                     <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="leF-sq-Xeo">
+                                                <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="leF-sq-Xeo">
                                                     <rect key="frame" x="285" y="11.5" width="60" height="34"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="60" id="I1x-KQ-U8O"/>
@@ -221,11 +221,17 @@
                                                     <rect key="frame" x="345" y="7.5" width="30" height="42"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                     <state key="normal" title="+"/>
+                                                    <connections>
+                                                        <action selector="increaseQuantity:" destination="f26-BJ-anT" eventType="touchUpInside" id="GrS-v4-6wd"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oVn-aE-sb8">
                                                     <rect key="frame" x="255" y="7.5" width="30" height="42"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                     <state key="normal" title="-"/>
+                                                    <connections>
+                                                        <action selector="decreaseQuantity:" destination="f26-BJ-anT" eventType="touchUpInside" id="UET-YE-pZd"/>
+                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Servings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ieq-lM-kYx">
                                                     <rect key="frame" x="285" y="47" width="60" height="18"/>
