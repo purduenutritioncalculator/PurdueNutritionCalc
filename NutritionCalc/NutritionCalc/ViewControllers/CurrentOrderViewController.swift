@@ -60,7 +60,7 @@ class CurrentOrderViewController: UIViewController, UITableViewDelegate, UITable
             cell.servingsLabel.isHidden = false
             
             cell.itemNameLabel.text = myOrder.foods[indexPath.row].Name
-            cell.quantityField.text = "1"
+            cell.quantityField.text = String(myOrder.quantities[indexPath.row])
             
             let calories = findLabelValOfType(type: "Calories", food: myOrder.foods[indexPath.row], index: indexPath.row)
             let protein = findLabelValOfType(type: "Protein", food: myOrder.foods[indexPath.row], index: indexPath.row)
@@ -135,6 +135,15 @@ class CurrentOrderViewController: UIViewController, UITableViewDelegate, UITable
         currentQuantity = currentQuantity + 1
         sendingCell.quantityField.text = "\(currentQuantity)"
         
+        if let index = currentOrderTableView.indexPath(for: sendingCell) {
+            myOrder.quantities[index.row] += 1
+            editNutrition(quantity: 1, item: myOrder.foods[index.row])
+            totalCalLabel.text = "\(myOrder.calories)"
+            totalFatLabel.text = "\(myOrder.fat)g"
+            totalCarbsLabel.text = "\(myOrder.carbs)g"
+            totalProteinLabel.text = "\(myOrder.protein)g"
+        }
+        
     }
     
     
@@ -154,6 +163,46 @@ class CurrentOrderViewController: UIViewController, UITableViewDelegate, UITable
             currentQuantity = currentQuantity - 1
             sendingCell.quantityField.text = "\(currentQuantity)"
         }
+        else {
+            return
+        }
         
+        if let index = currentOrderTableView.indexPath(for: sendingCell) {
+            myOrder.quantities[index.row] += 1
+            editNutrition(quantity: -1, item: myOrder.foods[index.row])
+            totalCalLabel.text = "\(myOrder.calories)"
+            totalFatLabel.text = "\(myOrder.fat)g"
+            totalCarbsLabel.text = "\(myOrder.carbs)g"
+            totalProteinLabel.text = "\(myOrder.protein)g"
+        }
+        
+    }
+    
+    func editNutrition(quantity: Int, item: ItemDetail) {
+        var calories = 0
+        var fat = 0
+        var carbs = 0
+        var protein = 0
+        
+        for entry in item.Nutrition {
+            if entry.Name == "Calories" {
+                let val = Int(entry.LabelValue.filter("01234567890.".contains)) ?? 0
+                calories = val
+            } else if entry.Name == "Total Carbohydrate" {
+                let val = Int(entry.LabelValue.filter("01234567890.".contains)) ?? 0
+                carbs = val
+            } else if entry.Name == "Protein" {
+                let val = Int(entry.LabelValue.filter("01234567890.".contains)) ?? 0
+                protein = val
+            } else if entry.Name == "Total fat" {
+                let val = Int(entry.LabelValue.filter("01234567890.".contains)) ?? 0
+                fat = val
+            }
+        }
+        
+        myOrder.calories += calories * quantity
+        myOrder.fat += fat * quantity
+        myOrder.carbs += carbs * quantity
+        myOrder.protein += protein * quantity
     }
 }

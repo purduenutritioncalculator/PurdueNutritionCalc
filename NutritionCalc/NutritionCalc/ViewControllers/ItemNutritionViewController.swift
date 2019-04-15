@@ -15,8 +15,10 @@ class ItemNutritionViewController: UIViewController, UITableViewDataSource, UITa
     var item: ItemDetail = ItemDetail()
     var ID: String = ""
     var userMeal:UserMeal = UserMeal()
-
+    
+    @IBOutlet weak var quantityField: UITextField!
     @IBOutlet weak var itemNutritionTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         itemNutritionTableView.delegate = self
@@ -69,22 +71,13 @@ class ItemNutritionViewController: UIViewController, UITableViewDataSource, UITa
     func addItemtoMeal(_ sender: Any) {
         self.userMeal.foods.append(item)
         
-//        let calString = item.Nutrition[1].LabelValue
-//        let calories = Int(calString.filter("01234567890.".contains)) ?? 0
-//
-//        let fatString = item.Nutrition[3].LabelValue
-//        let fat = Int(fatString.filter("01234567890.".contains)) ?? 0
-//
-//        let carbString = item.Nutrition[7].LabelValue
-//        let carbs = Int(carbString.filter("01234567890.".contains)) ?? 0
-//
-//        let proteinString = item.Nutrition[10].LabelValue
-//        let protein = Int(proteinString.filter("01234567890.".contains)) ?? 0
+        let quantity = Int(quantityField.text!) ?? 1
+        self.userMeal.quantities.append(quantity)
         
-        self.userMeal.calories += findNutritionVal(type: "Calories")
-        self.userMeal.carbs += findNutritionVal(type: "Total Carbohydrates")
-        self.userMeal.fat += findNutritionVal(type: "Total fat")
-        self.userMeal.protein += findNutritionVal(type: "Protein")
+        self.userMeal.calories += findNutritionVal(type: "Calories") * quantity
+        self.userMeal.carbs += findNutritionVal(type: "Total Carbohydrate") * quantity
+        self.userMeal.fat += findNutritionVal(type: "Total fat") * quantity
+        self.userMeal.protein += findNutritionVal(type: "Protein") * quantity
         
         print(self.userMeal)
         
@@ -101,6 +94,21 @@ class ItemNutritionViewController: UIViewController, UITableViewDataSource, UITa
         
         return 0
     }
+    
+    @IBAction func increaseQuantity(_ sender: Any) {
+        var curQuantity = Int(quantityField.text!)!
+        curQuantity += 1
+        quantityField.text = "\(curQuantity)"
+    }
+    
+    @IBAction func decreaseQuantity(_ sender: Any) {
+        var curQuantity = Int(quantityField.text!)!
+        if (curQuantity > 1) {
+            curQuantity -= 1
+            quantityField.text = "\(curQuantity)"
+        }
+    }
+    
     
     
 }

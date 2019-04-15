@@ -14,6 +14,7 @@ struct UserMeal {
     var fat:Int
     var carbs:Int
     var foods:[ItemDetail]
+    var quantities: [Int]
     var date:Date
     
     init() {
@@ -22,6 +23,7 @@ struct UserMeal {
         fat = 0
         carbs = 0
         foods = []
+        quantities = []
         date = Date()
     }
 }

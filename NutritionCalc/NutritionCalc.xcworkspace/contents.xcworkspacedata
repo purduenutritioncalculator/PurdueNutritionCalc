@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:NutritionCalc/MealModel+CoreDataClass.swift">
+   </FileRef>
+   <FileRef
+      location = "group:NutritionCalc/MealModel+CoreDataProperties.swift">
+   </FileRef>
+   <FileRef
       location = "group:NutritionCalc.xcodeproj">
    </FileRef>
    <FileRef
