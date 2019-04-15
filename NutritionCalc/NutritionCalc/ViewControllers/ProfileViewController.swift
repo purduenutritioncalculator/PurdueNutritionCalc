@@ -12,7 +12,10 @@ import CoreData
 class ProfileViewController: UIViewController {
     
     @IBOutlet weak var todayCals: UILabel!
+    @IBOutlet weak var todaysProtein: UILabel!
     
+    @IBOutlet weak var todaysFat: UILabel!
+    @IBOutlet weak var todaysCarbs: UILabel!
     var myMealHistory = [MealModel]()
     var todayMeals = [MealModel]()
 
@@ -30,6 +33,7 @@ class ProfileViewController: UIViewController {
         }
         print("profile array length: \(myMealHistory.count)")
         getTodaysMeal()
+        setLabels()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -49,7 +53,20 @@ class ProfileViewController: UIViewController {
     }
     
     func setLabels() {
-        
+        var cals = 0
+        var protein = 0
+        var carbs = 0
+        var fat = 0
+        for meal in todayMeals {
+            cals += Int(meal.calories)
+            fat += Int(meal.fats)
+            carbs += Int(meal.carbs)
+            protein += Int(meal.protein)
+        }
+        todaysProtein.text = String(protein)
+        todaysCarbs.text = String(carbs)
+        todaysFat.text = String(fat)
+        todayCals.text = String(cals)
     }
     /*
     // MARK: - Navigation
