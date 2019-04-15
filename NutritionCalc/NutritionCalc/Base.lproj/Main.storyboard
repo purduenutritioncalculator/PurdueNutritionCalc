@@ -345,9 +345,14 @@
                         <viewLayoutGuide key="safeArea" id="me7-Lr-Ek4"/>
                     </view>
                     <navigationItem key="navigationItem" title="Current Order" id="rVx-Ac-THG">
+                        <barButtonItem key="leftBarButtonItem" title="Go to Menu" id="NqH-rz-F1B">
+                            <connections>
+                                <segue destination="MIs-pX-klv" kind="unwind" identifier="backToItemList" unwindAction="unwindToItemListFor:towards:" id="1Ob-Cs-w15"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="checked" id="krj-rh-WGw">
                             <connections>
-                                <segue destination="MIs-pX-klv" kind="unwind" unwindAction="unwindToHomeFor:towards:" id="8gX-LL-NW9"/>
+                                <segue destination="MIs-pX-klv" kind="unwind" identifier="submitMeal" unwindAction="unwindToHomeFor:towards:" id="8gX-LL-NW9"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

@@ -86,6 +86,38 @@ class CurrentOrderViewController: UIViewController, UITableViewDelegate, UITable
         
     }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            
+            if myOrder.quantities.count > 1 {
+                editNutrition(quantity: -1 * myOrder.quantities[indexPath.row], item: myOrder.foods[indexPath.row])
+                
+                myOrder.foods.remove(at: indexPath.row)
+                myOrder.quantities.remove(at: indexPath.row)
+                
+                currentOrderTableView.deleteRows(at: [indexPath], with: .automatic)
+                
+                totalCalLabel.text = "\(myOrder.calories)"
+                totalFatLabel.text = "\(myOrder.fat)g"
+                totalCarbsLabel.text = "\(myOrder.carbs)g"
+                totalProteinLabel.text = "\(myOrder.protein)g"
+            }
+            else {
+                editNutrition(quantity: -1 * myOrder.quantities[indexPath.row], item: myOrder.foods[indexPath.row])
+                myOrder.foods.remove(at: indexPath.row)
+                myOrder.quantities.remove(at: indexPath.row)
+                
+                currentOrderTableView.reloadData()
+                totalCalLabel.text = "\(myOrder.calories)"
+                totalFatLabel.text = "\(myOrder.fat)g"
+                totalCarbsLabel.text = "\(myOrder.carbs)g"
+                totalProteinLabel.text = "\(myOrder.protein)g"
+            }
+            
+            
+        }
+    }
+    
 
     
     // MARK: - Navigation
@@ -94,17 +126,23 @@ class CurrentOrderViewController: UIViewController, UITableViewDelegate, UITable
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-        
-        if let dest = segue.destination as? HomeScreenViewController {
-            dest.mealList.append(myOrder)
-            let newSavedMeal = MealModel(context: PersistenceService.context)
-            newSavedMeal.calories = Int16(myOrder.calories)
-            newSavedMeal.carbs = Int16(myOrder.carbs)
-            newSavedMeal.fats = Int16(myOrder.fat)
-            newSavedMeal.protein = Int16(myOrder.protein)
-            newSavedMeal.date = myOrder.date as NSDate
-            dest.savedMeals.append(newSavedMeal)
-            PersistenceService.saveContext()
+        if segue.identifier == "submitMeal" {
+            if let dest = segue.destination as? HomeScreenViewController {
+                dest.mealList.append(myOrder)
+                let newSavedMeal = MealModel(context: PersistenceService.context)
+                newSavedMeal.calories = Int16(myOrder.calories)
+                newSavedMeal.carbs = Int16(myOrder.carbs)
+                newSavedMeal.fats = Int16(myOrder.fat)
+                newSavedMeal.protein = Int16(myOrder.protein)
+                newSavedMeal.date = myOrder.date as NSDate
+                dest.savedMeals.append(newSavedMeal)
+                PersistenceService.saveContext()
+            }
+        }
+        else if segue.identifier == "backToItemList" {
+            if let dest = segue.destination as? MenuViewController {
+                dest.userMeal = self.myOrder
+            }
         }
         
     }
@@ -168,7 +206,7 @@ class CurrentOrderViewController: UIViewController, UITableViewDelegate, UITable
         }
         
         if let index = currentOrderTableView.indexPath(for: sendingCell) {
-            myOrder.quantities[index.row] += 1
+            myOrder.quantities[index.row] -= 1
             editNutrition(quantity: -1, item: myOrder.foods[index.row])
             totalCalLabel.text = "\(myOrder.calories)"
             totalFatLabel.text = "\(myOrder.fat)g"
