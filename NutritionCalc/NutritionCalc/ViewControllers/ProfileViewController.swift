@@ -47,6 +47,10 @@ class ProfileViewController: UIViewController {
         print("first meal cals = \(self.myMealHistory[0].calories)")
         print("total meals today \(self.todayMeals.count)")
     }
+    
+    func setLabels() {
+        
+    }
     /*
     // MARK: - Navigation
 
