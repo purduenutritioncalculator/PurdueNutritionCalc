@@ -29,24 +29,23 @@ class ProfileViewController: UIViewController {
             print("error")
         }
         print("profile array length: \(myMealHistory.count)")
-        // Do any additional setup after loading the view.
         getTodaysMeal()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        print("profile array length: \(myMealHistory.count)")
     }
     
     func getTodaysMeal() {
-        let today = NSDate()
         for meal in myMealHistory {
-            let todayy = Calendar.current.isDateInToday(meal.date as! Date)
-            if todayy {
+            
+            let today = Calendar.current.isDateInToday(meal.date! as Date)
+            if today {
                 todayMeals.append(meal)
             }
         }
         print("first meal cals = \(self.myMealHistory[0].calories)")
+        print("total meals today \(self.todayMeals.count)")
     }
     /*
     // MARK: - Navigation
