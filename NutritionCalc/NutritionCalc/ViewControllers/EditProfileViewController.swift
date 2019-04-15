@@ -10,6 +10,26 @@ import UIKit
 
 class EditProfileViewController: UIViewController {
 
+   
+    @IBOutlet weak var HeightFeetTextField: UITextField!
+    
+    @IBOutlet weak var HeightInchesTextField: UITextField!
+    
+    
+    @IBOutlet weak var SexSegControl: UISegmentedControl!
+    
+    @IBOutlet weak var AgeTextField: UITextField!
+    
+    @IBOutlet weak var WeightTextField: UITextField!
+    
+    @IBOutlet weak var CaloriesTextField: UITextField!
+    
+    @IBOutlet weak var ProteinTextField: UITextField!
+    
+    @IBOutlet weak var CarbsTextField: UITextField!
+    
+    @IBOutlet weak var FatsTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,6 +39,11 @@ class EditProfileViewController: UIViewController {
 
     @IBAction func onCancel(_ sender: Any) {
         dismiss(animated: true, completion: nil)
+    }
+    
+    
+    @IBAction func OnBMITap(_ sender: Any) {
+        
     }
     /*
     // MARK: - Navigation
