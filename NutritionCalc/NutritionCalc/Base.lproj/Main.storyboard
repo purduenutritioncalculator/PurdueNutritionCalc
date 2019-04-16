@@ -493,22 +493,103 @@
                                     <action selector="startOrder:" destination="xCp-RM-DWw" eventType="touchUpInside" id="ct9-oq-o1e"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0G3-h8-KqA">
+                                <rect key="frame" x="25" y="89" width="150" height="150"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="3gc-VN-8IF"/>
+                                    <constraint firstAttribute="height" constant="150" id="Edh-gt-gyU"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gS7-Rf-vPy">
+                                <rect key="frame" x="200" y="89" width="150" height="150"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="2Dy-ED-S6F"/>
+                                    <constraint firstAttribute="height" constant="150" id="NH9-su-SUs"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DM4-Bx-ncu">
+                                <rect key="frame" x="200" y="443" width="150" height="150"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="XDr-az-lCl"/>
+                                    <constraint firstAttribute="width" constant="150" id="je7-ar-b7W"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tur-9T-uTg">
+                                <rect key="frame" x="25" y="443" width="150" height="150"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="miK-QG-cXU"/>
+                                    <constraint firstAttribute="height" constant="150" id="yPJ-1G-Fo9"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calories: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Yz-Pg-ETG">
+                                <rect key="frame" x="64.5" y="264" width="71.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Protein" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9sS-ng-cQP">
+                                <rect key="frame" x="248" y="264" width="54.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Carbs:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WkQ-io-RAv">
+                                <rect key="frame" x="249.5" y="397" width="51" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fat:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z1e-ut-WIR">
+                                <rect key="frame" x="85.5" y="397" width="29" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="0G3-h8-KqA" firstAttribute="top" secondItem="jdK-fs-qoA" secondAttribute="top" constant="25" id="2dL-N3-1wp"/>
                             <constraint firstItem="uOB-p7-d0G" firstAttribute="centerY" secondItem="BV8-Hc-taC" secondAttribute="centerY" id="36G-9g-DJB"/>
+                            <constraint firstItem="tur-9T-uTg" firstAttribute="centerX" secondItem="Z1e-ut-WIR" secondAttribute="centerX" id="EUj-Lo-3EX"/>
+                            <constraint firstItem="tur-9T-uTg" firstAttribute="top" secondItem="Z1e-ut-WIR" secondAttribute="bottom" constant="25" id="F2g-qr-T7o"/>
+                            <constraint firstItem="jdK-fs-qoA" firstAttribute="trailing" secondItem="DM4-Bx-ncu" secondAttribute="trailing" constant="25" id="GxF-iC-pzP"/>
+                            <constraint firstItem="DM4-Bx-ncu" firstAttribute="top" secondItem="WkQ-io-RAv" secondAttribute="bottom" constant="25" id="JnU-kp-5U2"/>
+                            <constraint firstItem="DM4-Bx-ncu" firstAttribute="centerX" secondItem="WkQ-io-RAv" secondAttribute="centerX" id="KpE-K7-Kbo"/>
+                            <constraint firstItem="gS7-Rf-vPy" firstAttribute="centerY" secondItem="0G3-h8-KqA" secondAttribute="centerY" id="QHy-jY-DLq"/>
                             <constraint firstItem="uOB-p7-d0G" firstAttribute="centerX" secondItem="BV8-Hc-taC" secondAttribute="centerX" id="ZGx-J3-oC3"/>
+                            <constraint firstItem="jdK-fs-qoA" firstAttribute="bottom" secondItem="tur-9T-uTg" secondAttribute="bottom" constant="25" id="b8b-UM-xKa"/>
+                            <constraint firstItem="jdK-fs-qoA" firstAttribute="bottom" secondItem="DM4-Bx-ncu" secondAttribute="bottom" constant="25" id="bAo-LL-2n3"/>
+                            <constraint firstItem="jdK-fs-qoA" firstAttribute="trailing" secondItem="gS7-Rf-vPy" secondAttribute="trailing" constant="25" id="dJr-cE-g1M"/>
+                            <constraint firstItem="9Yz-Pg-ETG" firstAttribute="top" secondItem="0G3-h8-KqA" secondAttribute="bottom" constant="25" id="dSE-Id-Nqg"/>
+                            <constraint firstItem="0G3-h8-KqA" firstAttribute="leading" secondItem="jdK-fs-qoA" secondAttribute="leading" constant="25" id="gre-TL-Rie"/>
+                            <constraint firstItem="gS7-Rf-vPy" firstAttribute="top" secondItem="jdK-fs-qoA" secondAttribute="top" constant="25" id="hqN-IX-8XG"/>
+                            <constraint firstItem="tur-9T-uTg" firstAttribute="leading" secondItem="jdK-fs-qoA" secondAttribute="leading" constant="25" id="jEk-Lf-LcA"/>
+                            <constraint firstItem="9sS-ng-cQP" firstAttribute="centerX" secondItem="gS7-Rf-vPy" secondAttribute="centerX" id="pi0-am-uNR"/>
+                            <constraint firstItem="9Yz-Pg-ETG" firstAttribute="centerX" secondItem="0G3-h8-KqA" secondAttribute="centerX" id="tgO-QL-BYW"/>
+                            <constraint firstItem="9sS-ng-cQP" firstAttribute="top" secondItem="gS7-Rf-vPy" secondAttribute="bottom" constant="25" id="toR-PD-srf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jdK-fs-qoA"/>
                     </view>
                     <navigationItem key="navigationItem" id="AdB-Ae-B4h"/>
                     <connections>
+                        <outlet property="calorieLabel" destination="9Yz-Pg-ETG" id="7kv-dM-IGO"/>
+                        <outlet property="calorieProgressContainer" destination="0G3-h8-KqA" id="Pwx-aM-U4k"/>
+                        <outlet property="carbLabel" destination="WkQ-io-RAv" id="wF0-Ho-2Y1"/>
+                        <outlet property="carbProgressContainer" destination="DM4-Bx-ncu" id="vIZ-hr-Izl"/>
+                        <outlet property="fatLabel" destination="Z1e-ut-WIR" id="WDM-U8-Gc3"/>
+                        <outlet property="fatProgressContainer" destination="tur-9T-uTg" id="itd-Nw-Sp4"/>
+                        <outlet property="proteinLabel" destination="9sS-ng-cQP" id="RBO-bj-9uH"/>
+                        <outlet property="proteinProgressContainer" destination="gS7-Rf-vPy" id="2Vp-OX-ydI"/>
                         <segue destination="cjx-nb-Nte" kind="show" identifier="beginOrder" id="svA-Ud-cg5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yb6-4J-f7g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-954" y="644"/>
+            <point key="canvasLocation" x="-954.39999999999998" y="643.62818590704649"/>
         </scene>
         <!--Add Meals-->
         <scene sceneID="WKR-2a-xhm">
