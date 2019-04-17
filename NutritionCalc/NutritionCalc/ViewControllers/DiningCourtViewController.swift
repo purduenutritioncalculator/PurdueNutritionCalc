@@ -21,6 +21,7 @@ class DiningCourtViewController: UIViewController, UITableViewDelegate, UITableV
         let backgroundImage = UIImageView(image: UIImage(named: "purduelogo"))
         backgroundImage.contentMode = .scaleAspectFit
         diningCourtTableView.backgroundView = backgroundImage
+        diningCourtTableView.backgroundColor = UIColor(red: 36/255, green: 52/255, blue: 71/255, alpha: 1.0)
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

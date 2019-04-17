@@ -36,6 +36,7 @@ class ProfileViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         todayCals.text = "25"
 
         let fetchRequest: NSFetchRequest<MealModel> = MealModel.fetchRequest()

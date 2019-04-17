@@ -20,6 +20,7 @@ class CurrentOrderViewController: UIViewController, UITableViewDelegate, UITable
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        currentOrderTableView.backgroundColor = UIColor(red: 36/255, green: 52/255, blue: 71/255, alpha: 1.0)
 
         // Do any additional setup after loading the view.
         currentOrderTableView.dataSource = self
@@ -49,6 +50,7 @@ class CurrentOrderViewController: UIViewController, UITableViewDelegate, UITable
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "currentOrderItem") as! CurrentOrderCell
+        cell.backgroundColor = UIColor(red: 36/255, green: 52/255, blue: 71/255, alpha: 0.0)
         
         
         if (myOrder.foods.count > 0) {

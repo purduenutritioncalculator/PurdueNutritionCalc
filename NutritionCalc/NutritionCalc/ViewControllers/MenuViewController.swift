@@ -20,6 +20,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        menuTableView.backgroundColor = UIColor(red: 36/255, green: 52/255, blue: 71/255, alpha: 1.0)
         
         menuTableView.delegate = self
         menuTableView.dataSource = self
@@ -74,7 +75,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "menuCell") as! MenuCell
-        
+        cell.itemLabel.textColor = UIColor.white
         if (mealTypeIndex == -1) {
             cell.itemLabel.text = "Unable to get menu data"
             return cell
@@ -82,12 +83,12 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         if (indexPath.row == 0) {
             cell.itemLabel.text = diningCourt.Meals[mealTypeIndex].Stations[indexPath.section].Name
-            cell.backgroundColor = UIColor(red: 255, green: 0, blue: 0, alpha: 0.1)
+            cell.backgroundColor = UIColor(red: 194/255, green: 144/255, blue: 14/255, alpha: 1.0)
             cell.isUserInteractionEnabled = false
             return cell
         } else {
             cell.itemLabel.text = diningCourt.Meals[mealTypeIndex].Stations[indexPath.section].Items[indexPath.row-1].Name
-            cell.backgroundColor = nil
+            cell.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.0)
             cell.isUserInteractionEnabled = true
             return cell
         }

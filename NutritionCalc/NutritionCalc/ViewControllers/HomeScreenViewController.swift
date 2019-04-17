@@ -32,6 +32,7 @@ class HomeScreenViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor(red: 36/255, green: 52/255, blue: 71/255, alpha: 1.0)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -108,7 +109,7 @@ class HomeScreenViewController: UIViewController {
             carbProgress!.secondaryColor = M13ProgressViewRing().secondaryColor
         }
         carbProgressContainer.addSubview(carbProgress!)
-        carbLabel.text = "Carbohydrates: \(todaysCarbs)g"
+        carbLabel.text = "Carbs: \(todaysCarbs)g"
         
         self.proteinProgress = M13ProgressViewRing(frame: CGRect(x: 0, y: 0, width: calorieProgressContainer.frame.width, height: calorieProgressContainer.frame.height))
         proteinProgress!.setProgress(CGFloat(todaysProt / 52.0), animated: true)
