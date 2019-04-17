@@ -15,12 +15,12 @@ Product Spec
 **Required Must-have Stories** 
 - [X] User can see calorie/nutritional info for all items at all dining courts. 
 - [X] User can "add to an order," which will add caloric/nutritional info of chosen foods and calculate total values. 
-- [ ] User can view past meals and past data.  
+- [ ] User can view past meals and past data. (Decided to cut)  
 
 **Optional Nice-to-have Stories** 
 - [ ] Can tell user closest dining court 
 - [ ] Data visualization for graphs/progress meters
-- [ ] Calorie/nutritional goals 
+- [X] Calorie/nutritional goals 
 - [ ] Alerts for when dining courts close if you haven't eaten a meal 
 - [ ] Tell which dining court has healthiest food for the day (least fat/sugar)
 - [ ] Calculate nutritional needs for a user's height/weight 
