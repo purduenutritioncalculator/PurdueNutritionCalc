@@ -55,4 +55,36 @@ class EditProfileViewController: UIViewController {
     }
     */
 
+    @IBAction func clearAllData(_ sender: Any) {
+        // an alert with the following message will pop up asking user if they are sure they want to clear infos
+        let clearMessage = "Are you sure you want to clear all app data? All entered information will be lost and you will be returned to the login screen. This action cannot be undone."
+        let clearAlert = UIAlertController(title: "Clear Data", message: clearMessage, preferredStyle: UIAlertController.Style.alert)
+        
+        // if the user confirms clearing data, will call confirmedClear() method
+        clearAlert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (action: UIAlertAction)
+            in self.confirmedClear()
+        }))
+        
+        // if the user says they don't want to clear data, print they cancelled to console
+        clearAlert.addAction(UIAlertAction(title: "No", style: .default, handler: {
+            (action: UIAlertAction) in
+            print("user cancelled the clear data")
+        }))
+        
+        // present the alert
+        present(clearAlert, animated: true, completion: nil)
+    }
+    
+    func confirmedClear() {
+        // set the courses array to a blank array
+        UserDefaults.standard.set(nil, forKey: "UserInfo")
+        
+        // take user back to login screen
+        //self.performSegue(withIdentifier: "clearedData", sender: self)
+        let registrationStoryBoard = UIStoryboard(name: "Register", bundle: nil)
+        let VC = registrationStoryBoard.instantiateInitialViewController()
+        let mainWindow = UIApplication.shared.delegate?.window
+        mainWindow!!.rootViewController = VC
+        mainWindow!!.makeKeyAndVisible()
+    }
 }

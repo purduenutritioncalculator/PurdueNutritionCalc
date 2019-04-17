@@ -17,6 +17,9 @@
 		719CF831225D295500C81C21 /* CurrentOrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719CF830225D295500C81C21 /* CurrentOrderCell.swift */; };
 		719CF839225EAEF700C81C21 /* MealModel+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719CF837225EAEF700C81C21 /* MealModel+CoreDataClass.swift */; };
 		719CF83A225EAEF700C81C21 /* MealModel+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719CF838225EAEF700C81C21 /* MealModel+CoreDataProperties.swift */; };
+		719CF83D2267BAC100C81C21 /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 719CF83C2267BAC100C81C21 /* Register.storyboard */; };
+		719CF83F2267C68F00C81C21 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719CF83E2267C68F00C81C21 /* RegistrationViewController.swift */; };
+		719CF8412267CFE900C81C21 /* userStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719CF8402267CFE900C81C21 /* userStruct.swift */; };
 		71D1D00E2252C7D7007BB313 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D1D00D2252C7D7007BB313 /* HomeScreenViewController.swift */; };
 		71D1D01022556729007BB313 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71D1D00F22556729007BB313 /* TabBar.storyboard */; };
 		71D1D012225567F5007BB313 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71D1D011225567F5007BB313 /* Profile.storyboard */; };
@@ -54,6 +57,9 @@
 		719CF830225D295500C81C21 /* CurrentOrderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentOrderCell.swift; sourceTree = "<group>"; };
 		719CF837225EAEF700C81C21 /* MealModel+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "MealModel+CoreDataClass.swift"; path = "NutritionCalc/MealModel+CoreDataClass.swift"; sourceTree = "<group>"; };
 		719CF838225EAEF700C81C21 /* MealModel+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "MealModel+CoreDataProperties.swift"; path = "NutritionCalc/MealModel+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		719CF83C2267BAC100C81C21 /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
+		719CF83E2267C68F00C81C21 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		719CF8402267CFE900C81C21 /* userStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userStruct.swift; sourceTree = "<group>"; };
 		71D1D00D2252C7D7007BB313 /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
 		71D1D00F22556729007BB313 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
 		71D1D011225567F5007BB313 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
@@ -126,9 +132,10 @@
 				715E6726224056D90025BA04 /* AppDelegate.swift */,
 				715E6728224056D90025BA04 /* ViewController.swift */,
 				715E672A224056D90025BA04 /* Main.storyboard */,
-				719CF82E225D287A00C81C21 /* ViewControllers */,
+				719CF83C2267BAC100C81C21 /* Register.storyboard */,
 				71D1D00F22556729007BB313 /* TabBar.storyboard */,
 				71D1D011225567F5007BB313 /* Profile.storyboard */,
+				719CF82E225D287A00C81C21 /* ViewControllers */,
 				719CF82D225D27D500C81C21 /* API */,
 				715E672D224056E30025BA04 /* Assets.xcassets */,
 				715E672F224056E30025BA04 /* LaunchScreen.storyboard */,
@@ -145,6 +152,7 @@
 				BC4EB60C2252C4AC00085529 /* mealStruct.swift */,
 				7140818D224988A000AC7C45 /* APIModels.swift */,
 				7140819022498C9A00AC7C45 /* APICaller.swift */,
+				719CF8402267CFE900C81C21 /* userStruct.swift */,
 			);
 			name = API;
 			path = NutritionCalc/API;
@@ -161,6 +169,7 @@
 				BCF61949224988FD009E61CC /* ItemNutritionViewController.swift */,
 				921AC4B9225C0A5900CF4C80 /* ProfileViewController.swift */,
 				921AC4BB225EA7CF00CF4C80 /* EditProfileViewController.swift */,
+				719CF83E2267C68F00C81C21 /* RegistrationViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -250,6 +259,7 @@
 				71D1D012225567F5007BB313 /* Profile.storyboard in Resources */,
 				715E672E224056E30025BA04 /* Assets.xcassets in Resources */,
 				715E672C224056D90025BA04 /* Main.storyboard in Resources */,
+				719CF83D2267BAC100C81C21 /* Register.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +320,7 @@
 				7140818E224988A000AC7C45 /* APIModels.swift in Sources */,
 				BCF6194A224988FD009E61CC /* ItemNutritionViewController.swift in Sources */,
 				719CF83A225EAEF700C81C21 /* MealModel+CoreDataProperties.swift in Sources */,
+				719CF8412267CFE900C81C21 /* userStruct.swift in Sources */,
 				715E6729224056D90025BA04 /* ViewController.swift in Sources */,
 				921AC4BF225EADF800CF4C80 /* MealModel+CoreDataClass.swift in Sources */,
 				71D1D014225C06A2007BB313 /* CurrentOrderViewController.swift in Sources */,
@@ -321,6 +332,7 @@
 				921AC4BC225EA7CF00CF4C80 /* EditProfileViewController.swift in Sources */,
 				BCDED9F4224540BD00156052 /* MealTypeController.swift in Sources */,
 				BC351AA5225EA43200779C38 /* MealModel.xcdatamodeld in Sources */,
+				719CF83F2267C68F00C81C21 /* RegistrationViewController.swift in Sources */,
 				BCB87F792246B1B800ED7B35 /* MenuViewController.swift in Sources */,
 				BCF6194C22498983009E61CC /* ItemNutritionCell.swift in Sources */,
 				719CF839225EAEF700C81C21 /* MealModel+CoreDataClass.swift in Sources */,

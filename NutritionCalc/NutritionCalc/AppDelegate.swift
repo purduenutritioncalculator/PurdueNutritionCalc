@@ -16,10 +16,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        let tabBarStoryBoard = UIStoryboard(name: "TabBar", bundle: nil)
-        let VC = tabBarStoryBoard.instantiateInitialViewController()
-        window?.rootViewController = VC
-        window?.makeKeyAndVisible()
+        
+        if let userData = UserDefaults.standard.data(forKey: "UserInfo") {
+            let tabBarStoryBoard = UIStoryboard(name: "TabBar", bundle: nil)
+            let VC = tabBarStoryBoard.instantiateInitialViewController()
+            window?.rootViewController = VC
+            window?.makeKeyAndVisible()
+            return true
+        } else {
+            //print("in else")
+            let registrationStoryBoard = UIStoryboard(name: "Register", bundle: nil)
+            let VC = registrationStoryBoard.instantiateInitialViewController()
+            window?.rootViewController = VC
+            window?.makeKeyAndVisible()
+            return true
+        }
+        
         
         return true
     }

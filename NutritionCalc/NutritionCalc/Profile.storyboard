@@ -360,8 +360,21 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zme-aS-0VR">
+                                <rect key="frame" x="118" y="576" width="139" height="30"/>
+                                <state key="normal" title="Clear All Saved Data">
+                                    <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearAllData:" destination="Qq8-kP-mSz" eventType="touchUpInside" id="kA6-je-wQY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="8yJ-Mi-2aH" firstAttribute="bottom" secondItem="Zme-aS-0VR" secondAttribute="bottom" constant="17" id="Q4J-p6-hv3"/>
+                            <constraint firstItem="Zme-aS-0VR" firstAttribute="centerX" secondItem="Iaj-mw-ewc" secondAttribute="centerX" id="pUB-1v-peP"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="8yJ-Mi-2aH"/>
                     </view>
                     <toolbarItems/>
@@ -384,11 +397,20 @@
                         <outlet property="ProteinTextField" destination="qSg-wg-wDz" id="HiL-dY-Cjs"/>
                         <outlet property="SexSegControl" destination="Tdt-xA-hiq" id="wiJ-GB-izo"/>
                         <outlet property="WeightTextField" destination="4WQ-K9-oye" id="pkU-RR-asJ"/>
+                        <segue destination="OY0-6H-4ff" kind="show" identifier="clearedData" id="Uh2-g8-Aah"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EyQ-5p-25A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3316" y="58.920539730134934"/>
+        </scene>
+        <!--Register-->
+        <scene sceneID="4Ir-UK-T6d">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Register" id="OY0-6H-4ff" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Syh-2A-rjH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4054" y="58"/>
         </scene>
         <!--Profile-->
         <scene sceneID="z0n-fr-XFD">
