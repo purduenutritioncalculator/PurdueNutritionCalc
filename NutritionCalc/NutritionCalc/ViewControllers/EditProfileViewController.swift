@@ -22,7 +22,8 @@ class EditProfileViewController: UIViewController {
     
     @IBOutlet weak var WeightTextField: UITextField!
     
-    @IBOutlet weak var CaloriesTextField: UITextField!
+    @IBOutlet weak var caloriesTextField: UITextField!
+    
     
     @IBOutlet weak var ProteinTextField: UITextField!
     
@@ -41,8 +42,23 @@ class EditProfileViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func onSubmit(_ sender: Any) {
+        
+    }
     
     @IBAction func OnBMITap(_ sender: Any) {
+        if(AgeTextField.text == "" || HeightInchesTextField.text == "" || HeightFeetTextField.text == "") {
+            let errorMsg = "Please fill the Sex, Age and Height categories for recommended BMI stats"
+            let errorAlert = UIAlertController(title: "Empty Fields", message: errorMsg, preferredStyle: UIAlertController.Style.alert)
+            errorAlert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+            present(errorAlert, animated: true, completion: nil)
+            return
+        }
+        let age = AgeTextField.text
+        let sex = SexSegControl.selectedSegmentIndex
+        let feet = HeightFeetTextField.text
+        let inches = HeightInchesTextField.text
+        
         
     }
     /*

@@ -11,11 +11,26 @@ import CoreData
 
 class ProfileViewController: UIViewController {
     
+    @IBOutlet weak var userName: UILabel!
+    
+    @IBOutlet weak var userSex: UILabel!
+    
+    @IBOutlet weak var userAge: UILabel!
+    @IBOutlet weak var userHeight: UILabel!
+    @IBOutlet weak var userWeight: UILabel!
     @IBOutlet weak var todayCals: UILabel!
     @IBOutlet weak var todaysProtein: UILabel!
     
     @IBOutlet weak var todaysFat: UILabel!
     @IBOutlet weak var todaysCarbs: UILabel!
+    
+    @IBOutlet weak var dailyCaloriesNeeded: UILabel!
+    
+    @IBOutlet weak var dailyProteinNeeded: UILabel!
+    
+    @IBOutlet weak var dailyCarbsNeeded: UILabel!
+    
+    @IBOutlet weak var dailyFatsNeeded: UILabel!
     var myMealHistory = [MealModel]()
     var todayMeals = [MealModel]()
 
@@ -67,6 +82,17 @@ class ProfileViewController: UIViewController {
         todaysCarbs.text = String(carbs)
         todaysFat.text = String(fat)
         todayCals.text = String(cals)
+    }
+    func fillProfile(name: String, age: String, sex: String, height: String, weight: String, calories: String, protein: String, carbs: String, fats: String) {
+        userName.text = name
+        userAge.text = age
+        userSex.text = sex
+        userHeight.text = height
+        userWeight.text = weight
+        dailyCaloriesNeeded.text = calories
+        dailyFatsNeeded.text = fats
+        dailyCarbsNeeded.text = carbs
+        dailyProteinNeeded.text = protein
     }
     /*
     // MARK: - Navigation
