@@ -21,6 +21,9 @@ class ItemNutritionViewController: UIViewController, UITableViewDataSource, UITa
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        itemNutritionTableView.backgroundColor = UIColor(red: 36/255, green: 52/255, blue: 71/255, alpha: 1.0)
+
         itemNutritionTableView.delegate = self
         itemNutritionTableView.dataSource = self
 
@@ -30,7 +33,7 @@ class ItemNutritionViewController: UIViewController, UITableViewDataSource, UITa
             self.itemNutritionTableView.reloadData()
             self.title = self.item.Name
         }
-        
+        self.view.backgroundColor = UIColor(red: 36/255, green: 52/255, blue: 71/255, alpha: 1.0)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -45,7 +48,10 @@ class ItemNutritionViewController: UIViewController, UITableViewDataSource, UITa
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "itemNutritionCell") as! ItemNutritionCell
-        
+        cell.backgroundColor = UIColor(red: 36/255, green: 52/255, blue: 71/255, alpha: 1.0)
+        cell.quantityLabel.textColor = UIColor.white
+        cell.typeLabel.textColor = UIColor.white
+
         if (item.Nutrition.count > 0) {
             cell.quantityLabel.isHidden = false
             cell.typeLabel.text = item.Nutrition[indexPath.row].Name
