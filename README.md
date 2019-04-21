@@ -112,4 +112,4 @@ Menu Detailed Item View
 
 ## Progress Gifs for Sprint 4
 
-![](Sprint4Gif.git)
+![](Sprint4Gif.gif)
