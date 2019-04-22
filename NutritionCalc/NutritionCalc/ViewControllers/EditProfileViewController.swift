@@ -9,15 +9,16 @@
 import UIKit
 
 class EditProfileViewController: UIViewController {
-    var sex = 1
-    var height = 0
-    var weight = 0
-    var age = 0
-    var cals = 0.0
-    var protein = 0.0
-    var fat = 0.0
-    var carb = 0.0
-   
+    
+    var sexG = 1
+    var heightFeetG = 0.0
+    var weightG = 0
+    var ageG = 0
+    var calsG = 0.0
+    var proteinG = 0.0
+    var fatG = 0.0
+    var carbG = 0.0
+    
     @IBOutlet weak var HeightFeetTextField: UITextField!
     
     @IBOutlet weak var HeightInchesTextField: UITextField!
@@ -37,6 +38,8 @@ class EditProfileViewController: UIViewController {
     @IBOutlet weak var CarbsTextField: UITextField!
     
     @IBOutlet weak var FatsTextField: UITextField!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -81,25 +84,44 @@ class EditProfileViewController: UIViewController {
     }
     
     @IBAction func OnBMITap(_ sender: Any) {
-        if(AgeTextField.text == "" || HeightInchesTextField.text == "" || HeightFeetTextField.text == "") {
-            let errorMsg = "Please fill the Sex, Age and Height categories for recommended BMI stats"
-            let errorAlert = UIAlertController(title: "Empty Fields", message: errorMsg, preferredStyle: UIAlertController.Style.alert)
-            errorAlert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-            present(errorAlert, animated: true, completion: nil)
-            return
-        }
-        age = Int(AgeTextField.text!) ?? 0
-        sex = SexSegControl.selectedSegmentIndex
-        let feet = Int(HeightFeetTextField.text!) ?? 6
-        let inches = Int(HeightInchesTextField.text!) ?? 0
+        let age = Double(AgeTextField.text!) ?? 0
+        let weight = Double(WeightTextField.text!) ?? 150
+        let sexSelection = SexSegControl.selectedSegmentIndex
+        let feet = Double(HeightFeetTextField.text!) ?? 6
+        let inches = Double(HeightInchesTextField.text!) ?? 0
         let totInches = feet * 12 + inches
         let cals = Double(caloriesTextField.text!) ?? 2000
         let fatPct = (Double(FatsTextField.text!) ?? 20) / 100
         let carbPct = (Double(CarbsTextField.text!) ?? 50) / 100
         let proteinPct = (Double(ProteinTextField.text!) ?? 30) / 100
-        fat = cals * fatPct
-        protein = cals * proteinPct
-        carb = cals * carbPct
+        fatG = cals * fatPct
+        proteinG = cals * proteinPct
+        carbG = cals * carbPct
+        if(AgeTextField.text == "" || HeightInchesTextField.text == "" || HeightFeetTextField.text == "") {
+            let errorMsg = "Please fill the Sex, Age and Height categories for recommended BMI stats"
+            let errorAlert = UIAlertController(title: "Empty Fields", message: errorMsg, preferredStyle: UIAlertController.Style.alert)
+            errorAlert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+            present(errorAlert, animated: true, completion: nil)
+        }else {
+            var BMR = 0.0
+            if(SexSegControl.selectedSegmentIndex == 0){
+                BMR = 66.0
+                BMR += (6.23 * weight)
+                BMR += ((12.7 * totInches) - (6.8 * age))
+            }
+            else{
+                BMR = (665.0 + (4.35 * weight))
+                BMR += (12.7 * totInches) - (6.8 * age)
+            }
+            let caloriesNeeded = BMR * 1.55
+            caloriesTextField.text = String(caloriesNeeded)
+            ProteinTextField.text = "100"
+            CarbsTextField.text = "100"
+            FatsTextField.text = "100"
+            return
+        }
+        
+        
     }
     
     @IBAction func onSubmitStats(_ sender: Any) {
@@ -107,11 +129,16 @@ class EditProfileViewController: UIViewController {
         let fatPct = (Double(FatsTextField.text!) ?? 20) / 100
         let carbPct = (Double(CarbsTextField.text!) ?? 50) / 100
         let proteinPct = (Double(ProteinTextField.text!) ?? 30) / 100
-        fat = cals * fatPct / 9
-        protein = cals * proteinPct / 4
-        carb = cals * carbPct / 4
+        fatG = calsG * fatPct / 9
+        proteinG = calsG * proteinPct / 4
+        carbG = calsG * carbPct / 4
+        
     }
-    
+}
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
     }
@@ -149,3 +176,4 @@ class EditProfileViewController: UIViewController {
         mainWindow!!.makeKeyAndVisible()
     }
 }
+*/
