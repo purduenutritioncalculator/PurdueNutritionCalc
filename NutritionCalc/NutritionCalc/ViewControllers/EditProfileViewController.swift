@@ -54,6 +54,33 @@ class EditProfileViewController: UIViewController {
     
     @IBAction func onSubmit(_ sender: Any) {
         
+        if let age = Int(AgeTextField.text!), let feet = Int(HeightFeetTextField.text!), let inches = Double(HeightInchesTextField.text!), let weight = Double(WeightTextField.text!), let calories = Int(caloriesTextField.text!), let protein = Int(ProteinTextField.text!), let fat = Int(FatsTextField.text!), let carbs = Int(CarbsTextField.text!) {
+            let decoder = PropertyListDecoder()
+            if let currentInfo = try? decoder.decode(User.self, from: (UserDefaults.standard.value(forKey: "UserInfo") as? Data)!) {
+                let name = currentInfo.name
+                let newUser = User(name: name, age: age, feet: feet, inches: inches, weight: weight, calories: calories, protein: protein, fat: fat, carbs: carbs)
+                let encoder = PropertyListEncoder()
+                
+                if let data = try? encoder.encode(newUser) as Data {
+                    UserDefaults.standard.set(data, forKey: "UserInfo")
+                    print("about to return!")
+                    self.navigationController?.popViewController(animated: true)
+                    return
+                }
+                
+            }
+        }
+        
+        else {
+            let errorMsg = "Please fill all fields before submitting"
+            let errorAlert = UIAlertController(title: "Empty Fields", message: errorMsg, preferredStyle: UIAlertController.Style.alert)
+            errorAlert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+            present(errorAlert, animated: true, completion: nil)
+            return
+        }
+        
+        
+        
     }
     
     @IBAction func OnBMITap(_ sender: Any) {
