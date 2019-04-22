@@ -54,6 +54,19 @@ class ProfileViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        
+        let decoder = PropertyListDecoder()
+        
+        if let userInfo = try? decoder.decode(User.self, from: (UserDefaults.standard.value(forKey: "UserInfo") as? Data)!) {
+            userName.text = userInfo.name
+            userAge.text = "\(userInfo.age)"
+            userHeight.text = "\(userInfo.feet)' \(userInfo.inches)\""
+            userWeight.text = "\(userInfo.weight)lbs"
+            dailyCaloriesNeeded.text = "\(userInfo.calories)"
+            dailyFatsNeeded.text = "\(userInfo.fat)g"
+            dailyCarbsNeeded.text = "\(userInfo.carbs)g"
+            dailyProteinNeeded.text = "\(userInfo.protein)g"
+        }
     }
     
     func getTodaysMeal() {
@@ -104,5 +117,8 @@ class ProfileViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    func unwindToProfile(for unwindSegue: UIStoryboardSegue, towards subsequentVC: UIViewController) {
+        return
+    }
 
 }
