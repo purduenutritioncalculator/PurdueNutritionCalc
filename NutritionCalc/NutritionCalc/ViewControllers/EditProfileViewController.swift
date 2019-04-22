@@ -70,15 +70,21 @@ class EditProfileViewController: UIViewController {
         let fatPct = (Double(FatsTextField.text!) ?? 20) / 100
         let carbPct = (Double(CarbsTextField.text!) ?? 50) / 100
         let proteinPct = (Double(ProteinTextField.text!) ?? 30) / 100
-        
         fat = cals * fatPct
         protein = cals * proteinPct
         carb = cals * carbPct
     }
     
     @IBAction func onSubmitStats(_ sender: Any) {
-        
+        let cals = Double(caloriesTextField.text!) ?? 2000
+        let fatPct = (Double(FatsTextField.text!) ?? 20) / 100
+        let carbPct = (Double(CarbsTextField.text!) ?? 50) / 100
+        let proteinPct = (Double(ProteinTextField.text!) ?? 30) / 100
+        fat = cals * fatPct / 9
+        protein = cals * proteinPct / 4
+        carb = cals * carbPct / 4
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
     }

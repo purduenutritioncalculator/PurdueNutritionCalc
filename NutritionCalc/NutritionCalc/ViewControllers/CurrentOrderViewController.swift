@@ -148,7 +148,6 @@ class CurrentOrderViewController: UIViewController, UITableViewDelegate, UITable
         }
         
     }
- 
     
     func findLabelValOfType(type: String, food: ItemDetail, index: Int) -> String {
         for entry in food.Nutrition {
