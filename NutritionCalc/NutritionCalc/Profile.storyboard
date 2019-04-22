@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Yrt-69-c09">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Yrt-69-c09">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -369,21 +369,21 @@
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qSg-wg-wDz">
-                                <rect key="frame" x="125" y="376" width="76" height="30"/>
+                                <rect key="frame" x="133" y="376" width="68" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cJF-mw-dti">
-                                <rect key="frame" x="116" y="416" width="85" height="30"/>
+                                <rect key="frame" x="133" y="416" width="68" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XUA-EG-d2k">
-                                <rect key="frame" x="103" y="458" width="98" height="30"/>
+                                <rect key="frame" x="133" y="458" width="68" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -437,7 +437,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Submit" id="zh4-D0-tbO">
                             <connections>
-                                <action selector="onSubmit:" destination="Qq8-kP-mSz" id="Dco-jc-YMR"/>
+                                <action selector="onSubmit:" destination="Qq8-kP-mSz" id="xpN-KK-6Ci"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -457,7 +457,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EyQ-5p-25A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3316" y="58.920539730134934"/>
+            <point key="canvasLocation" x="2436" y="59"/>
         </scene>
         <!--Register-->
         <scene sceneID="4Ir-UK-T6d">
@@ -465,7 +465,7 @@
                 <viewControllerPlaceholder storyboardName="Register" id="OY0-6H-4ff" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Syh-2A-rjH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4054" y="58"/>
+            <point key="canvasLocation" x="3116" y="58"/>
         </scene>
         <!--Profile-->
         <scene sceneID="z0n-fr-XFD">
@@ -490,6 +490,7 @@
         <!--Navigation Controller-->
         <scene sceneID="Ja6-ab-1fE">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vYf-g9-JTp" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nOZ-QW-pVj" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Wn6-ta-Xpe">
@@ -501,9 +502,8 @@
                         <segue destination="Qq8-kP-mSz" kind="relationship" relationship="rootViewController" id="IB1-HO-QHH"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vYf-g9-JTp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2376.8000000000002" y="58.920539730134934"/>
+            <point key="canvasLocation" x="1676" y="59"/>
         </scene>
     </scenes>
     <resources>

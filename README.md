@@ -109,3 +109,7 @@ Menu Detailed Item View
 ## Progress Gifs for Sprint 3
 
 ![](Sprint3Gif.gif)
+
+## Progress Gifs for Sprint 4
+
+![](Sprint4Gif.gif)

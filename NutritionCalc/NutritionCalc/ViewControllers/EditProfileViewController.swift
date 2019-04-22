@@ -9,7 +9,14 @@
 import UIKit
 
 class EditProfileViewController: UIViewController {
-
+    var sex = 1
+    var height = 0
+    var weight = 0
+    var age = 0
+    var cals = 0.0
+    var protein = 0.0
+    var fat = 0.0
+    var carb = 0.0
    
     @IBOutlet weak var HeightFeetTextField: UITextField!
     
@@ -54,6 +61,30 @@ class EditProfileViewController: UIViewController {
             present(errorAlert, animated: true, completion: nil)
             return
         }
+        age = Int(AgeTextField.text!) ?? 0
+        sex = SexSegControl.selectedSegmentIndex
+        let feet = Int(HeightFeetTextField.text!) ?? 6
+        let inches = Int(HeightInchesTextField.text!) ?? 0
+        let totInches = feet * 12 + inches
+        let cals = Double(caloriesTextField.text!) ?? 2000
+        let fatPct = (Double(FatsTextField.text!) ?? 20) / 100
+        let carbPct = (Double(CarbsTextField.text!) ?? 50) / 100
+        let proteinPct = (Double(ProteinTextField.text!) ?? 30) / 100
+        fat = cals * fatPct
+        protein = cals * proteinPct
+        carb = cals * carbPct
+    }
+    
+    @IBAction func onSubmitStats(_ sender: Any) {
+        let cals = Double(caloriesTextField.text!) ?? 2000
+        let fatPct = (Double(FatsTextField.text!) ?? 20) / 100
+        let carbPct = (Double(CarbsTextField.text!) ?? 50) / 100
+        let proteinPct = (Double(ProteinTextField.text!) ?? 30) / 100
+        fat = cals * fatPct / 9
+        protein = cals * proteinPct / 4
+        carb = cals * carbPct / 4
+    }
+    
         let age = AgeTextField.text
         let sex = SexSegControl.selectedSegmentIndex
         let feet = HeightFeetTextField.text
@@ -67,10 +98,8 @@ class EditProfileViewController: UIViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        
     }
-    */
 
     @IBAction func clearAllData(_ sender: Any) {
         // an alert with the following message will pop up asking user if they are sure they want to clear infos
