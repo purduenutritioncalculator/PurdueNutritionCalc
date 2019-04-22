@@ -59,6 +59,16 @@ class EditProfileViewController: UIViewController {
             let errorAlert = UIAlertController(title: "Empty Fields", message: errorMsg, preferredStyle: UIAlertController.Style.alert)
             errorAlert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
             present(errorAlert, animated: true, completion: nil)
+            let BMR = 0
+            if(SexSegControl.selectedSegmentIndex = 0){
+                
+            }
+            if(SexSegControl.selectedSegmentIndex = 0)
+            
+            caloriesTextField.text = "2000"
+            ProteinTextField.text = "100"
+            CarbsTextField.text = "100"
+            FatsTextField.text = "100"
             return
         }
         age = Int(AgeTextField.text!) ?? 0
@@ -83,16 +93,8 @@ class EditProfileViewController: UIViewController {
         fat = cals * fatPct / 9
         protein = cals * proteinPct / 4
         carb = cals * carbPct / 4
-    }
-    
-        let age = AgeTextField.text
-        let sex = SexSegControl.selectedSegmentIndex
-        let feet = HeightFeetTextField.text
-        let inches = HeightInchesTextField.text
         
-        
-        
-    }
+}
     /*
     // MARK: - Navigation
 
