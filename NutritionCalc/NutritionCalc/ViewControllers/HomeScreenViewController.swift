@@ -49,6 +49,20 @@ class HomeScreenViewController: UIViewController {
         // Do any additional setup after loading the view.
         print("total meals: \(savedMeals.count)")
         
+        let decoder = PropertyListDecoder()
+        
+        var calorieGoal = 0
+        var fatGoal = 0
+        var proteinGoal = 0
+        var carbGoal = 0
+        
+        if let myUser = try? decoder.decode(User.self, from: UserDefaults.standard.value(forKey: "UserInfo") as! Data) {
+            calorieGoal = myUser.calories
+            fatGoal = myUser.fat
+            proteinGoal = myUser.protein
+            carbGoal = myUser.carbs
+        }
+        
         let todaysMeals = getTodaysMeal()
         var todaysCals = 0.0
         var todaysFats = 0.0
@@ -76,7 +90,7 @@ class HomeScreenViewController: UIViewController {
         }
         
         self.calorieProgress = M13ProgressViewRing(frame: CGRect(x: 0, y: 0, width: calorieProgressContainer.frame.width, height: calorieProgressContainer.frame.height))
-        calorieProgress!.setProgress(CGFloat(todaysCals / 2000.0), animated: true)
+        calorieProgress!.setProgress(CGFloat(todaysCals / Double(calorieGoal)), animated: true)
         if (todaysCals / 2000.0 > 1.0) {
             calorieProgress!.primaryColor = UIColor(red: 255, green: 0, blue: 0, alpha: 1)
             calorieProgress!.secondaryColor = UIColor(red: 255, green: 0, blue: 0, alpha: 1)
@@ -88,7 +102,7 @@ class HomeScreenViewController: UIViewController {
         calorieLabel.text = "Calories: \(todaysCals)"
         
         self.fatProgress = M13ProgressViewRing(frame: CGRect(x: 0, y: 0, width: calorieProgressContainer.frame.width, height: calorieProgressContainer.frame.height))
-        fatProgress!.setProgress(CGFloat(todaysFats / 60.0), animated: true)
+        fatProgress!.setProgress(CGFloat(todaysFats / Double(fatGoal)), animated: true)
         if (todaysFats / 60.0 > 1.0) {
             fatProgress!.primaryColor = UIColor(red: 255, green: 0, blue: 0, alpha: 1)
             fatProgress!.secondaryColor = UIColor(red: 255, green: 0, blue: 0, alpha: 1)
@@ -100,7 +114,7 @@ class HomeScreenViewController: UIViewController {
         fatLabel.text = "Fats: \(todaysFats)g"
         
         self.carbProgress = M13ProgressViewRing(frame: CGRect(x: 0, y: 0, width: calorieProgressContainer.frame.width, height: calorieProgressContainer.frame.height))
-        carbProgress!.setProgress(CGFloat(todaysCarbs / 275.0), animated: true)
+        carbProgress!.setProgress(CGFloat(todaysCarbs / Double(carbGoal)), animated: true)
         if (todaysCarbs / 275.0 > 1.0) {
             carbProgress!.primaryColor = UIColor(red: 255, green: 0, blue: 0, alpha: 1)
             carbProgress!.secondaryColor = UIColor(red: 255, green: 0, blue: 0, alpha: 1)
@@ -112,7 +126,7 @@ class HomeScreenViewController: UIViewController {
         carbLabel.text = "Carbs: \(todaysCarbs)g"
         
         self.proteinProgress = M13ProgressViewRing(frame: CGRect(x: 0, y: 0, width: calorieProgressContainer.frame.width, height: calorieProgressContainer.frame.height))
-        proteinProgress!.setProgress(CGFloat(todaysProt / 52.0), animated: true)
+        proteinProgress!.setProgress(CGFloat(todaysProt / Double(proteinGoal)), animated: true)
         if (todaysProt / 52.0 > 1.0) {
             proteinProgress!.primaryColor = UIColor(red: 255, green: 0, blue: 0, alpha: 1)
             proteinProgress!.secondaryColor = UIColor(red: 255, green: 0, blue: 0, alpha: 1)
