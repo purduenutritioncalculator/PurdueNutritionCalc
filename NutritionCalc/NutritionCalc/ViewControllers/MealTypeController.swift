@@ -43,7 +43,7 @@ class MealTypeController: UIViewController, UITableViewDataSource, UITableViewDe
         print("Dining court: \(diningCourt) Date: \(result)")
         
         let url = URL(string: "https://api.hfs.purdue.edu/menus/v2/locations/\(diningCourt)/\(result)")!
-        let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
+        let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 5)
         let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
         let task = session.dataTask(with: request) { (data, response, error) in
             // This will run when the network request returns

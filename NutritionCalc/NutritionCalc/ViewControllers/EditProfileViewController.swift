@@ -114,7 +114,7 @@ class EditProfileViewController: UIViewController {
                 BMR += (12.7 * totInches) - (6.8 * age)
             }
             let caloriesNeeded = BMR * 1.55
-            caloriesTextField.text = String(caloriesNeeded)
+            caloriesTextField.text = String.init(format: "%d", Int(caloriesNeeded))
             ProteinTextField.text = "100"
             CarbsTextField.text = "100"
             FatsTextField.text = "100"
