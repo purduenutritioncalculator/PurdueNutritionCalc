@@ -49,12 +49,30 @@ class MealTypeController: UIViewController, UITableViewDataSource, UITableViewDe
             // This will run when the network request returns
             if let error = error {
                 print(error.localizedDescription)
+                let errorMsg = "Data is unavailable at this time"
+                let errorAlert = UIAlertController(title: "Connection Error", message: errorMsg, preferredStyle: UIAlertController.Style.alert)
+                errorAlert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+                self.present(errorAlert, animated: true, completion: {
+                    self.navigationController?.popViewController(animated: true)
+                })
             } else if let data = data {
                 let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
                 
-                self.meals = dataDictionary["Meals"] as! [[String:Any]]
+                if let meals = dataDictionary["Meals"] as? [[String:Any]] {
+                    self.meals = meals
+                    self.mealSelectTableView.reloadData()
+                }
+                else {
+                    
+                    let errorMsg = "Data is unavailable at this time"
+                    let errorAlert = UIAlertController(title: "Connection Error", message: errorMsg, preferredStyle: UIAlertController.Style.alert)
+                    errorAlert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+                    self.present(errorAlert, animated: true, completion: {
+                        self.navigationController?.popViewController(animated: true)
+                    })
+                }
                 
-                self.mealSelectTableView.reloadData()
+                
 
             }
         }
