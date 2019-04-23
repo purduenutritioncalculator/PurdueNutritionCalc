@@ -89,8 +89,8 @@ class ProfileViewController: UIViewController {
         if let userInfo = try? decoder.decode(User.self, from: (UserDefaults.standard.value(forKey: "UserInfo") as? Data)!) {
             userName.text = userInfo.name
             userAge.text = "\(userInfo.age)"
-            userHeight.text = "\(userInfo.feet)' \(userInfo.inches)\""
-            userWeight.text = "\(userInfo.weight)lbs"
+            userHeight.text = "\(userInfo.feet)'\(Int(userInfo.inches))\""
+            userWeight.text = "\(userInfo.weight) lbs"
             dailyCaloriesNeeded.text = "\(userInfo.calories)"
             dailyFatsNeeded.text = "\(userInfo.fat)g"
             dailyCarbsNeeded.text = "\(userInfo.carbs)g"
