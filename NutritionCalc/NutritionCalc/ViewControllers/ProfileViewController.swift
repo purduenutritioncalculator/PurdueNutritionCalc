@@ -60,6 +60,22 @@ class ProfileViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        // set colors
+        self.view.backgroundColor = UIColor(red: 36/255, green: 52/255, blue: 71/255, alpha: 1.0)
+        userAge.textColor = UIColor.white
+        userSex.textColor = UIColor.white
+        userName.textColor = UIColor.white
+        userHeight.textColor = UIColor.white
+        userWeight.textColor = UIColor.white
+        todayCals.textColor = UIColor.white
+        todaysFat.textColor = UIColor.white
+        todaysCarbs.textColor = UIColor.white
+        todaysProtein.textColor = UIColor.white
+        dailyFatsNeeded.textColor = UIColor.white
+        dailyCarbsNeeded.textColor = UIColor.white
+        dailyCaloriesNeeded.textColor = UIColor.white
+        dailyProteinNeeded.textColor = UIColor.white
+        
         
         let decoder = PropertyListDecoder()
         
