@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Profile View Controller-->
+        <!--Today-->
         <scene sceneID="y9X-YN-Zob">
             <objects>
                 <viewController id="FHb-hy-glH" customClass="ProfileViewController" customModule="NutritionCalc" customModuleProvider="target" sceneMemberID="viewController">
@@ -241,7 +241,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="uok-io-nvI"/>
                     </view>
-                    <navigationItem key="navigationItem" id="fLZ-Tf-f8l">
+                    <navigationItem key="navigationItem" title="Today" id="fLZ-Tf-f8l">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="xOH-u5-9bF">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="aZA-KV-rqR">
                                 <rect key="frame" x="284" y="7" width="75" height="30"/>
