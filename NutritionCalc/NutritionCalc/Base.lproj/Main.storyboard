@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Dining Court View Controller-->
+        <!--Dining-->
         <scene sceneID="lIU-Qq-Q97">
             <objects>
                 <viewController id="cjx-nb-Nte" customClass="DiningCourtViewController" customModule="NutritionCalc" customModuleProvider="target" sceneMemberID="viewController">
@@ -61,7 +61,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="RiN-On-6YE"/>
                     </view>
-                    <navigationItem key="navigationItem" id="H2t-y5-6kd"/>
+                    <navigationItem key="navigationItem" title="Dining" id="H2t-y5-6kd"/>
                     <connections>
                         <outlet property="diningCourtTableView" destination="g3F-wU-dnl" id="FeA-BG-2US"/>
                     </connections>
@@ -506,7 +506,7 @@
             </objects>
             <point key="canvasLocation" x="-954.39999999999998" y="3946.7766116941534"/>
         </scene>
-        <!--Home Screen View Controller-->
+        <!--Home-->
         <scene sceneID="let-Hx-NId">
             <objects>
                 <viewController id="xCp-RM-DWw" customClass="HomeScreenViewController" customModule="NutritionCalc" customModuleProvider="target" sceneMemberID="viewController">
@@ -645,7 +645,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jdK-fs-qoA"/>
                     </view>
-                    <navigationItem key="navigationItem" id="AdB-Ae-B4h"/>
+                    <navigationItem key="navigationItem" title="Home" id="AdB-Ae-B4h"/>
                     <connections>
                         <outlet property="calorieLabel" destination="9Yz-Pg-ETG" id="7kv-dM-IGO"/>
                         <outlet property="calorieProgressContainer" destination="0G3-h8-KqA" id="Pwx-aM-U4k"/>
