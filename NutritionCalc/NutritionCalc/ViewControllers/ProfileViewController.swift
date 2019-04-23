@@ -44,7 +44,14 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         
         todayCals.text = "25"
-
+        fetchMeals()
+        
+        print("profile array length: \(myMealHistory.count)")
+        getTodaysMeal()
+        setLabels()
+    }
+    
+    func fetchMeals() {
         let fetchRequest: NSFetchRequest<MealModel> = MealModel.fetchRequest()
         
         do {
@@ -53,13 +60,13 @@ class ProfileViewController: UIViewController {
         } catch {
             print("error")
         }
-        print("profile array length: \(myMealHistory.count)")
-        getTodaysMeal()
-        setLabels()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        
+        print("calling view did appear...\n")
+        fetchMeals()
         
         let decoder = PropertyListDecoder()
         
