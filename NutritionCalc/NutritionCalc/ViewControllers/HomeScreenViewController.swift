@@ -91,7 +91,7 @@ class HomeScreenViewController: UIViewController {
         
         self.calorieProgress = M13ProgressViewRing(frame: CGRect(x: 0, y: 0, width: calorieProgressContainer.frame.width, height: calorieProgressContainer.frame.height))
         calorieProgress!.setProgress(CGFloat(todaysCals / Double(calorieGoal)), animated: true)
-        if (todaysCals / 2000.0 > 1.0) {
+        if (todaysCals / Double(calorieGoal) > 1.0) {
             calorieProgress!.primaryColor = UIColor(red: 255, green: 0, blue: 0, alpha: 1)
             calorieProgress!.secondaryColor = UIColor(red: 255, green: 0, blue: 0, alpha: 1)
         } else {
@@ -103,7 +103,7 @@ class HomeScreenViewController: UIViewController {
         
         self.fatProgress = M13ProgressViewRing(frame: CGRect(x: 0, y: 0, width: calorieProgressContainer.frame.width, height: calorieProgressContainer.frame.height))
         fatProgress!.setProgress(CGFloat(todaysFats / Double(fatGoal)), animated: true)
-        if (todaysFats / 60.0 > 1.0) {
+        if (todaysFats / Double(fatGoal) > 1.0) {
             fatProgress!.primaryColor = UIColor(red: 255, green: 0, blue: 0, alpha: 1)
             fatProgress!.secondaryColor = UIColor(red: 255, green: 0, blue: 0, alpha: 1)
         } else {
@@ -115,7 +115,7 @@ class HomeScreenViewController: UIViewController {
         
         self.carbProgress = M13ProgressViewRing(frame: CGRect(x: 0, y: 0, width: calorieProgressContainer.frame.width, height: calorieProgressContainer.frame.height))
         carbProgress!.setProgress(CGFloat(todaysCarbs / Double(carbGoal)), animated: true)
-        if (todaysCarbs / 275.0 > 1.0) {
+        if (todaysCarbs / Double(carbGoal) > 1.0) {
             carbProgress!.primaryColor = UIColor(red: 255, green: 0, blue: 0, alpha: 1)
             carbProgress!.secondaryColor = UIColor(red: 255, green: 0, blue: 0, alpha: 1)
         } else {
@@ -127,7 +127,7 @@ class HomeScreenViewController: UIViewController {
         
         self.proteinProgress = M13ProgressViewRing(frame: CGRect(x: 0, y: 0, width: calorieProgressContainer.frame.width, height: calorieProgressContainer.frame.height))
         proteinProgress!.setProgress(CGFloat(todaysProt / Double(proteinGoal)), animated: true)
-        if (todaysProt / 52.0 > 1.0) {
+        if (todaysProt / Double(proteinGoal) > 1.0) {
             proteinProgress!.primaryColor = UIColor(red: 255, green: 0, blue: 0, alpha: 1)
             proteinProgress!.secondaryColor = UIColor(red: 255, green: 0, blue: 0, alpha: 1)
         } else {

@@ -94,7 +94,9 @@ class ItemNutritionViewController: UIViewController, UITableViewDataSource, UITa
         for entry in item.Nutrition {
             if entry.Name == type {
                 let string = entry.LabelValue
-                return Int(string.filter("01234567890.".contains)) ?? 0
+                var double = Double(string.filter("01234567890.".contains)) ?? 0
+                double.round(.up)
+                return Int(double)
             }
         }
         
