@@ -140,6 +140,11 @@ class EditProfileViewController: UIViewController {
         carbG = calsG * carbPct / 4
         
     }
+    
+    @IBAction func exitKeyboard(_ sender: Any) {
+        view.endEditing(true)
+    }
+    
 }
     /*
     // MARK: - Navigation

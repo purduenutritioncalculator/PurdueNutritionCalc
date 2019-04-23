@@ -431,6 +431,9 @@
                             <constraint firstItem="Zme-aS-0VR" firstAttribute="centerX" secondItem="Iaj-mw-ewc" secondAttribute="centerX" id="pUB-1v-peP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8yJ-Mi-2aH"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="al5-7c-rpi" appends="YES" id="EVy-rU-SBT"/>
+                        </connections>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Edit Profile" id="bFO-GR-Urv">
@@ -454,6 +457,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EyQ-5p-25A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="al5-7c-rpi">
+                    <connections>
+                        <action selector="exitKeyboard:" destination="Qq8-kP-mSz" id="DSX-gl-oPV"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2058" y="59"/>
         </scene>
