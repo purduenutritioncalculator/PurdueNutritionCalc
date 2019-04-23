@@ -11,6 +11,7 @@ import Foundation
 struct User: Codable {
     
     var name: String
+    var sex: Int  // 0 is male, 1 is female
     var age: Int
     var feet: Int
     var inches: Double
@@ -30,10 +31,12 @@ struct User: Codable {
         protein = 0
         fat = 0
         carbs = 0
+        sex = 0
     }
     
-    init(name: String, age: Int, feet: Int, inches: Double, weight: Double, calories: Int, protein: Int, fat: Int, carbs: Int) {
+    init(name: String, sex: Int, age: Int, feet: Int, inches: Double, weight: Double, calories: Int, protein: Int, fat: Int, carbs: Int) {
         self.name = name
+        self.sex = sex
         self.age = age
         self.feet = feet
         self.inches = inches

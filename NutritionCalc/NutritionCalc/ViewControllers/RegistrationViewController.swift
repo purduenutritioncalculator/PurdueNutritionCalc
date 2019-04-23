@@ -70,7 +70,8 @@ class RegistrationViewController: UIViewController {
             let carbs = Int(carbField.text!) {
             
             let encoder = PropertyListEncoder()
-            let newUser = User(name: name, age: age, feet: feet, inches: inches, weight: weight, calories: calories, protein: protein, fat: fats, carbs: carbs)
+            let sex = sexSelector.selectedSegmentIndex
+            let newUser = User(name: name, sex: sex, age: age, feet: feet, inches: inches, weight: weight, calories: calories, protein: protein, fat: fats, carbs: carbs)
             
             if let userData = try? encoder.encode(newUser) as Data {
                 UserDefaults.standard.set(userData, forKey: "UserInfo")
@@ -90,11 +91,29 @@ class RegistrationViewController: UIViewController {
             let inches = Double(inchesField.text!),
             let weight = Double(weightField.text!) {
             
-            autofillErrorLabel.isHidden = true
-            calorieField.text = "2000"
-            fatField.text = "60"
-            carbField.text = "275"
-            proteinField.text = "52"
+            var BMR = 0.0
+            if(sexSelector.selectedSegmentIndex == 0){
+                BMR = 66.0
+                BMR += (6.23 * weight)
+                var totInches = Double(feet) * 12.0 + inches
+                BMR += ((12.7 * totInches) - (6.8 * Double(age)))
+            }
+            else{
+                BMR = (665.0 + (4.35 * weight))
+                var totInches = Double(feet) * 12.0 + inches
+                BMR += (12.7 * totInches) - (6.8 * Double(age))
+            }
+            
+            let caloriesNeeded = Int(BMR * 1.55)
+            calorieField.text = String.init(format: "%d", caloriesNeeded)
+            
+            let kilos = weight * 0.453592
+            let proteinRec = Int(weight * 0.8)
+            proteinField.text = "\(proteinRec)"
+            let carbRec = Int(Double(caloriesNeeded) * 0.55 / 4.0)
+            carbField.text = "\(carbRec)"
+            let fatRec = Int(Double(caloriesNeeded) * 0.3 / 9.0)
+            fatField.text = "\(fatRec)"
             autofillErrorLabel.isHidden = true
             
         }

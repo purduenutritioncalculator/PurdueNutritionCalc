@@ -66,6 +66,11 @@ class ProfileViewController: UIViewController {
             dailyFatsNeeded.text = "\(userInfo.fat)g"
             dailyCarbsNeeded.text = "\(userInfo.carbs)g"
             dailyProteinNeeded.text = "\(userInfo.protein)g"
+            if userInfo.sex == 0 {
+                userSex.text = "Male"
+            } else {
+                userSex.text = "Female"
+            }
         }
     }
     
@@ -77,8 +82,8 @@ class ProfileViewController: UIViewController {
                 todayMeals.append(meal)
             }
         }
-        print("first meal cals = \(self.myMealHistory[0].calories)")
-        print("total meals today \(self.todayMeals.count)")
+//        print("first meal cals = \(self.myMealHistory[0].calories)")
+//        print("total meals today \(self.todayMeals.count)")
     }
     
     func setLabels() {

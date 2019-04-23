@@ -58,7 +58,8 @@ class EditProfileViewController: UIViewController {
             let decoder = PropertyListDecoder()
             if let currentInfo = try? decoder.decode(User.self, from: (UserDefaults.standard.value(forKey: "UserInfo") as? Data)!) {
                 let name = currentInfo.name
-                let newUser = User(name: name, age: age, feet: feet, inches: inches, weight: weight, calories: calories, protein: protein, fat: fat, carbs: carbs)
+                let sex = SexSegControl.selectedSegmentIndex
+                let newUser = User(name: name, sex: sex, age: age, feet: feet, inches: inches, weight: weight, calories: calories, protein: protein, fat: fat, carbs: carbs)
                 let encoder = PropertyListEncoder()
                 
                 if let data = try? encoder.encode(newUser) as Data {
@@ -113,11 +114,16 @@ class EditProfileViewController: UIViewController {
                 BMR = (665.0 + (4.35 * weight))
                 BMR += (12.7 * totInches) - (6.8 * age)
             }
-            let caloriesNeeded = BMR * 1.55
-            caloriesTextField.text = String.init(format: "%d", Int(caloriesNeeded))
-            ProteinTextField.text = "100"
-            CarbsTextField.text = "100"
-            FatsTextField.text = "100"
+            let caloriesNeeded = Int(BMR * 1.55)
+            caloriesTextField.text = String.init(format: "%d", caloriesNeeded)
+            
+            let kilos = Double(weight) * 0.453592
+            let proteinRec = Int(0.8 * kilos)
+            ProteinTextField.text = "\(proteinRec)"
+            let carbRec = Int(Double(caloriesNeeded) * 0.55 / 4.0)
+            CarbsTextField.text = "\(carbRec)"
+            let fatRec = Int(Double(caloriesNeeded) * 0.3 / 9.0)
+            FatsTextField.text = "\(fatRec)"
             return
         }
         
