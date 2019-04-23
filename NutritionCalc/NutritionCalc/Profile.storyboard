@@ -248,10 +248,14 @@
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="calsProgress" destination="Z5i-sY-pRE" id="JEF-WO-gdW"/>
+                        <outlet property="carbProgress" destination="OoQ-0z-0zp" id="wBO-Iy-Tac"/>
                         <outlet property="dailyCaloriesNeeded" destination="1cZ-lJ-7j6" id="mjI-QP-gQl"/>
                         <outlet property="dailyCarbsNeeded" destination="V6X-YF-0Y7" id="buH-fb-AWy"/>
                         <outlet property="dailyFatsNeeded" destination="iY4-hC-KrW" id="Rer-OM-2UL"/>
                         <outlet property="dailyProteinNeeded" destination="pzZ-vO-rwc" id="kME-I7-FmZ"/>
+                        <outlet property="fatProgress" destination="9qI-sc-2cJ" id="Iee-Gu-XbT"/>
+                        <outlet property="proteinProgress" destination="xEm-lZ-2Er" id="xsc-GX-XBu"/>
                         <outlet property="todayCals" destination="Uof-r3-Roc" id="LGL-63-niP"/>
                         <outlet property="todaysCarbs" destination="3sX-5G-Urf" id="4rG-qi-BLU"/>
                         <outlet property="todaysFat" destination="1ue-iY-01P" id="8uc-3m-Wds"/>

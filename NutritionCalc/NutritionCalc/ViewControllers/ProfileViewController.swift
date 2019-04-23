@@ -34,6 +34,12 @@ class ProfileViewController: UIViewController {
     var myMealHistory = [MealModel]()
     var todayMeals = [MealModel]()
 
+    @IBOutlet weak var calsProgress: UIProgressView!
+    
+    @IBOutlet weak var carbProgress: UIProgressView!
+    @IBOutlet weak var proteinProgress: UIProgressView!
+    @IBOutlet weak var fatProgress: UIProgressView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -72,9 +78,12 @@ class ProfileViewController: UIViewController {
                 userSex.text = "Female"
             }
         }
+        getTodaysMeal()
+        setLabels()
     }
     
     func getTodaysMeal() {
+        todayMeals = []
         for meal in myMealHistory {
             
             let today = Calendar.current.isDateInToday(meal.date! as Date)
@@ -101,7 +110,17 @@ class ProfileViewController: UIViewController {
         todaysCarbs.text = String(carbs)
         todaysFat.text = String(fat)
         todayCals.text = String(cals)
+        
+        let decoder = PropertyListDecoder()
+
+        if let userInfo = try? decoder.decode(User.self, from: (UserDefaults.standard.value(forKey: "UserInfo") as? Data)!) {
+            calsProgress.progress = Float(cals) / Float(userInfo.calories)
+            carbProgress.progress = Float(carbs) / Float(userInfo.carbs)
+            fatProgress.progress = Float(fat) / Float(userInfo.fat)
+            proteinProgress.progress = Float(protein) / Float(userInfo.protein)
+        }
     }
+    
     func fillProfile(name: String, age: String, sex: String, height: String, weight: String, calories: String, protein: String, carbs: String, fats: String) {
         userName.text = name
         userAge.text = age
