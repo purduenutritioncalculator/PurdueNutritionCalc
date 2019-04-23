@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="purduelogo" translatesAutoresizingMaskIntoConstraints="NO" id="0Rw-Dj-KnJ">
-                                <rect key="frame" x="77" y="200" width="229" height="161"/>
+                                <rect key="frame" x="65" y="194" width="245" height="161"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
