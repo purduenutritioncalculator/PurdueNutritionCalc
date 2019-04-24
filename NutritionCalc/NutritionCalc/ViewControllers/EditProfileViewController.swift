@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class EditProfileViewController: UIViewController {
     
@@ -164,15 +165,6 @@ class EditProfileViewController: UIViewController {
         view.endEditing(true)
     }
     
-}
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-    }
-
     @IBAction func clearAllData(_ sender: Any) {
         // an alert with the following message will pop up asking user if they are sure they want to clear infos
         let clearMessage = "Are you sure you want to clear all app data? All entered information will be lost and you will be returned to the login screen. This action cannot be undone."
@@ -197,6 +189,7 @@ class EditProfileViewController: UIViewController {
         // set the courses array to a blank array
         UserDefaults.standard.set(nil, forKey: "UserInfo")
         
+        deleteAllData()
         // take user back to login screen
         //self.performSegue(withIdentifier: "clearedData", sender: self)
         let registrationStoryBoard = UIStoryboard(name: "Register", bundle: nil)
@@ -205,5 +198,31 @@ class EditProfileViewController: UIViewController {
         mainWindow!!.rootViewController = VC
         mainWindow!!.makeKeyAndVisible()
     }
+    
+    func deleteAllData() {
+        let fetchRequest: NSFetchRequest<MealModel> = MealModel.fetchRequest()
+        
+        do {
+            let meals = try PersistenceService.context.fetch(fetchRequest)
+            
+            for object in meals {
+                PersistenceService.context.delete(object)
+            }
+        } catch {
+            print("error")
+        }
+        
+    }
+    
+}
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+    }
+
+
 }
 */
