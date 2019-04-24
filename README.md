@@ -113,6 +113,3 @@ Menu Detailed Item View
 ## Progress Gifs for Sprint 4
 
 ![](Sprint4Gif.gif)
-
-## Final walkthrough
-![](Walkthrough.mp4)
