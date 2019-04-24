@@ -108,7 +108,7 @@ class RegistrationViewController: UIViewController {
             calorieField.text = String.init(format: "%d", caloriesNeeded)
             
             let kilos = weight * 0.453592
-            let proteinRec = Int(weight * 0.8)
+            let proteinRec = Int(kilos * 0.8)
             proteinField.text = "\(proteinRec)"
             let carbRec = Int(Double(caloriesNeeded) * 0.55 / 4.0)
             carbField.text = "\(carbRec)"
