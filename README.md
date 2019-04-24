@@ -19,11 +19,11 @@ Product Spec
 
 **Optional Nice-to-have Stories** 
 - [ ] Can tell user closest dining court 
-- [ ] Data visualization for graphs/progress meters
+- [X] Data visualization for graphs/progress meters
 - [X] Calorie/nutritional goals 
 - [ ] Alerts for when dining courts close if you haven't eaten a meal 
 - [ ] Tell which dining court has healthiest food for the day (least fat/sugar)
-- [ ] Calculate nutritional needs for a user's height/weight 
+- [X] Calculate nutritional needs for a user's height/weight 
 
 ## 2. Screen Archetypes 
 * Login / Register 
